@@ -61,8 +61,8 @@ public class test {
         System.out.println("longest-prefix: " + result3.toString());
         System.out.println();
 
-        String sa = "anabuconda";
-        String sb = "anallulala";
+        String sa = "abracadebra";
+        String sb = "abracavocado";
         List<Character> l1 = new ArrayList<>();
         for(char c : sa.toCharArray()){
             l1.add(c);

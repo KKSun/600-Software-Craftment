@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99bb453-4c17-4ce4-9cb4-6b780866df62" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hw1/RecursionSol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hw1/StreamSol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw1/Solution3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw1/RecursionSol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw1/RecursionSol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw1/RecursionSol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1/RecursionSol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw1/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw1/test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,6 +18,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw1/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecursionSol.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hw1/RecursionSol.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hw1/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,26 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw1/test.java">
+      <file leaf-file-name="StreamSol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw1/StreamSol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-502">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecursionSol.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hw1/RecursionSol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -78,6 +86,7 @@
         <option value="$PROJECT_DIR$/src/hw1/ListImpl.java" />
         <option value="$PROJECT_DIR$/src/hw1/Solution.java" />
         <option value="$PROJECT_DIR$/src/hw1/Solution3.java" />
+        <option value="$PROJECT_DIR$/src/hw1/StreamSol.java" />
         <option value="$PROJECT_DIR$/src/hw1/test.java" />
         <option value="$PROJECT_DIR$/src/hw1/RecursionSol.java" />
       </list>
@@ -252,12 +261,12 @@
       <option name="presentableId" value="Default" />
       <updated>1535726058653</updated>
       <workItem from="1535726060174" duration="394000" />
-      <workItem from="1535726458283" duration="15343000" />
+      <workItem from="1535726458283" duration="17554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15737000" />
+    <option name="totallyTimeSpent" value="17948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,6 +319,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.java">
@@ -400,16 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw1/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw1/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -420,10 +424,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw1/StreamSol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw1/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw1/RecursionSol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
