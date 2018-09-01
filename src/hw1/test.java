@@ -1,47 +1,46 @@
 package hw1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 public class test {
     public static void main(String[] args){
-//        System.out.println("------------------Test on Integer------------------");
-//        Solution<Integer> s1 = new Solution<>();
-//        List<Integer> a1 = new ArrayList<>();
-//        List<Integer> b1 = new ArrayList<>();
-//        Comparator<Integer> cmp1 = (o1, o2) -> {
-//            if(o1.intValue() == o2.intValue()){
-//                return 0;
-//            }else{
-//                return -1;
-//            }
-//        };
-//        a1.add(1);a1.add(2);a1.add(3);a1.add(4);a1.add(5);
-//        b1.add(1);b1.add(2);b1.add(3);b1.add(9);b1.add(5);
-//        List<Integer> result1 = s1.longestPrefix(a1,b1,cmp1);
-//        System.out.println("elements in a : " + a1.toString());
-//        System.out.println("elements in b : " + b1);
-//        System.out.println("longest-prefix: " + result1.toString());
-//
-//        System.out.println("------------------Test on String------------------");
-//        Solution<String> s2 = new Solution<>();
-//        List<String> a2 = new ArrayList<>();
-//        List<String> b2 = new ArrayList<>();
-//        Comparator<String> cmp2 = (o1, o2) -> {
-//            if(o1.equals(o2)){
-//                return 0;
-//            }else{
-//                return -1;
-//            }
-//        };
-//        a2.add("amy");a2.add("bob");a2.add("cola");a2.add("mika");
-//        b2.add("amy");b2.add("bob");b2.add("Dosy");b2.add("mika");
-//        List<String> result2 = s2.longestPrefix(a2,b2,cmp2);
-//        System.out.println("elements in a : " + a2.toString());
-//        System.out.println("elements in b : " + b2);
-//        System.out.println("longest-prefix: " + result2.toString());
+        System.out.println("------------------Test on Integer------------------");
+        Solution<Integer> s1 = new Solution<>();
+        List<Integer> a1 = new ArrayList<>();
+        List<Integer> b1 = new ArrayList<>();
+        Comparator<Integer> cmp1 = (o1, o2) -> {
+            if(o1.intValue() == o2.intValue()){
+                return 0;
+            }else{
+                return -1;
+            }
+        };
+        a1.add(1);a1.add(2);a1.add(3);a1.add(4);a1.add(5);
+        b1.add(1);b1.add(2);b1.add(3);b1.add(9);b1.add(5);
+        List<Integer> result1 = s1.longestPrefix(a1,b1,cmp1);
+        System.out.println("elements in a : " + a1.toString());
+        System.out.println("elements in b : " + b1);
+        System.out.println("longest-prefix: " + result1.toString());
+
+        System.out.println("------------------Test on String------------------");
+        Solution<String> s2 = new Solution<>();
+        List<String> a2 = new ArrayList<>();
+        List<String> b2 = new ArrayList<>();
+        Comparator<String> cmp2 = (o1, o2) -> {
+            if(o1.equals(o2)){
+                return 0;
+            }else{
+                return -1;
+            }
+        };
+        a2.add("amy");a2.add("bob");a2.add("cola");a2.add("mika");
+        b2.add("amy");b2.add("bob");b2.add("Dosy");b2.add("mika");
+        List<String> result2 = s2.longestPrefix(a2,b2,cmp2);
+        System.out.println("elements in a : " + a2.toString());
+        System.out.println("elements in b : " + b2);
+        System.out.println("longest-prefix: " + result2.toString());
 
         System.out.println("------------------Test on Character------------------");
         Solution<Character> s3 = new Solution<>();
@@ -73,7 +72,14 @@ public class test {
             l2.add(c);
         }
         System.out.println("elements in a : " + l1.toString());
-        System.out.println("elements in b : " + l2.toString());
+        System.out.println("elements in b : " + l2);
         System.out.println("longest-prefix: " + s3.longestPrefix(l1,l2,cmp3));
+
+
+        System.out.println("------------------Test with Recursion------------------");
+        RecursionSol<Character> s4 = new RecursionSol<>();
+        System.out.println("elements in a : " + l1);
+        System.out.println("elements in b : " + l2.toString());
+        System.out.println("longest-prefix: " + s4.longestPrefix(l1,l2,cmp3));
     }
 }
