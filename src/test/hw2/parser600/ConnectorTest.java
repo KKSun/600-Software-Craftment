@@ -74,15 +74,5 @@ public class ConnectorTest {
         System.out.println(c4.toList().toString());
     }
 
-
-    /**
-     * Method: getConnectorByType(Type t)
-     */
-    @Test
-    public void testGetConnectorByType() {
-        Connector cc = Connector.getConnectorByType(Type.OR);
-        assertEquals(c2,cc);
-    }
-
 } 
 

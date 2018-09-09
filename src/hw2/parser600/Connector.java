@@ -64,7 +64,7 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
     }
 
     //helper function to simplify BooleanList add(Type t)
-    public static Connector getConnectorByType(Type t){
+    static Connector getConnectorByType(Type t){
         if(t == Type.OR){
             return or_Connector;
         }else if(t == Type.AND){
