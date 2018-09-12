@@ -5,13 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 public final class BooleanList implements Iterable<ListSymbol> {
+    //represent the BooleanList is frozen or not
     private boolean frozen = false;
 
     private final List<ListSymbol> listRepresentation = new ArrayList<>();
 
     public final List<ListSymbol> getListRepresentation() {
-        List<ListSymbol> copy = new ArrayList<>(listRepresentation);
-        return copy;
+        return new ArrayList<>(listRepresentation);
     }
 
     @Override
@@ -27,21 +27,11 @@ public final class BooleanList implements Iterable<ListSymbol> {
         return true;
     }
 
-    public final boolean add(Type type) throws UnsupportedOperationException{
+    public final boolean add(Type type){
         if(frozen){
             throw new UnsupportedOperationException("cannot add anymore");
         }
-        if(NotConnector(type)){
-            throw new IllegalArgumentException("you can only put " +
-                                               "and, or, not, open, close " +
-                                               "if you use method add(Type type)");
-        }
-        listRepresentation.add(Connector.getConnectorByType(type));
-        return true;
-    }
-
-    private static boolean NotConnector(Type t){
-        return t == Type.VARIABLE || t == Type.EXPRESSION || t == Type.TERM;
+        return listRepresentation.add(Connector.getConnectorByType(type));
     }
 
     public final void freeze(){

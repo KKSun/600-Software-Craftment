@@ -8,8 +8,7 @@ public final class Variable extends AbstractListSymbol implements ListSymbol{
 
     private Variable(String representation) {
         // representation is required to be not null
-        this.representation =
-                Objects.requireNonNull(representation, "representation of a Variable should not be null");
+        this.representation = representation;
     }
 
     @Override
@@ -23,7 +22,8 @@ public final class Variable extends AbstractListSymbol implements ListSymbol{
 
     //statically build the Variable since the constructor is private
     public static final Variable build(String representation){
-        return new Variable(representation);
+        return new Variable(Objects.
+                requireNonNull(representation, "representation of a Variable should not be null"));
     }
 
     public String toString(){

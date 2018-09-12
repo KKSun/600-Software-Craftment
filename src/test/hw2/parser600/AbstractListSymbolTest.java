@@ -36,6 +36,8 @@ public class AbstractListSymbolTest {
         BooleanList cv = c.toList();
         System.out.println(bv);
         System.out.println(cv);
+        cv.add(v);
+        System.out.println(cv.toString());
     }
 
 

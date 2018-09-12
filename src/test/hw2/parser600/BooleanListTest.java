@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.After;
 
 import java.util.Iterator;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -42,7 +43,10 @@ public class BooleanListTest {
      */
     @Test
     public void testGetListRepresentation() {
-        System.out.println(bb.getListRepresentation().toString());
+        List<ListSymbol> bb2 = bb.getListRepresentation();
+        assertTrue(bb2.hashCode() != bb.hashCode());
+        System.out.println(bb2.toString());
+        System.out.println(bb.toString());
     }
 
     /**
@@ -53,7 +57,7 @@ public class BooleanListTest {
         Iterator<ListSymbol> i = bb.iterator();
         while(i.hasNext()){
             ListSymbol ls = i.next();
-            System.out.print(ls + " ");
+            System.out.print(ls);
         }
     }
 

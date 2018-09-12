@@ -42,7 +42,7 @@ public class VariableTest {
     public void testRepresentationGetter() {
         String expected = "cc";
         String s = v.representationGetter();
-        assertTrue(s.equals(expected));
+        assertEquals(s,expected);
     }
 
     /**
@@ -60,7 +60,7 @@ public class VariableTest {
     public void testToString() {
         String expected = "cc";
         String s = v.toString();
-        assertTrue(s.equals(expected));
+        assertEquals(expected,s);
     }
 
 } 

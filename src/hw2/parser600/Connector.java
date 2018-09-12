@@ -59,6 +59,8 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
             case CLOSE:
                 s += ")";
                 break;
+            default:
+                assert false:"msg";
         }
         return s;
     }
