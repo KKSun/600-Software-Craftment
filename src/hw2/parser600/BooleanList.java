@@ -1,14 +1,15 @@
 package hw2.parser600;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class BooleanList implements Iterable<ListSymbol> {
-    //represent the BooleanList is frozen or not
-    private boolean frozen = false;
 
-    private final List<ListSymbol> listRepresentation = new ArrayList<>();
+    //cannot be final if we use Collections.unmodifiableList() to do 'freeze'
+    private List<ListSymbol> listRepresentation = new ArrayList<>();
 
     public final List<ListSymbol> getListRepresentation() {
         return new ArrayList<>(listRepresentation);
@@ -16,34 +17,22 @@ public final class BooleanList implements Iterable<ListSymbol> {
 
     @Override
     public Iterator<ListSymbol> iterator() {
-        return listRepresentation.iterator();
+        return this.getListRepresentation().iterator();
     }
 
     public final Boolean add(ListSymbol listSymbol) throws UnsupportedOperationException{
-        if(frozen){
-            throw new UnsupportedOperationException("cannot add anymore");
-        }
-        listRepresentation.add(listSymbol);
-        return true;
+        return listRepresentation.add(listSymbol);
     }
 
     public final boolean add(Type type){
-        if(frozen){
-            throw new UnsupportedOperationException("cannot add anymore");
-        }
-        return listRepresentation.add(Connector.getConnectorByType(type));
+        return listRepresentation.add(Connector.build(type));
     }
 
     public final void freeze(){
-        frozen = true;
+        listRepresentation = Collections.unmodifiableList(listRepresentation);
     }
 
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        Iterator<ListSymbol> i = this.iterator();
-        while(i.hasNext()){
-            sb.append(i.next().toString());
-        }
-        return sb.toString();
+        return getListRepresentation().stream().map(ListSymbol::toString).collect(Collectors.joining(" "));
     }
 }

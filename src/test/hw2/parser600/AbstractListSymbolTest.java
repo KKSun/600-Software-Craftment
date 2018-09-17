@@ -2,6 +2,7 @@ package test.hw2.parser600;
 
 import hw2.parser600.BooleanList;
 import hw2.parser600.Connector;
+import hw2.parser600.Type;
 import hw2.parser600.Variable;
 import org.junit.Test;
 import org.junit.Before;
@@ -31,7 +32,7 @@ public class AbstractListSymbolTest {
     @Test
     public void testToList() {
         Variable v = Variable.build("awesome");
-        Connector c = Connector.build('~');
+        Connector c = Connector.build(Type.NOT);
         BooleanList bv = v.toList();
         BooleanList cv = c.toList();
         System.out.println(bv);
@@ -39,6 +40,5 @@ public class AbstractListSymbolTest {
         cv.add(v);
         System.out.println(cv.toString());
     }
-
 
 } 

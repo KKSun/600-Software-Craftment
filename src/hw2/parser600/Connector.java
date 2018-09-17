@@ -1,19 +1,29 @@
 package hw2.parser600;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public final class Connector extends AbstractListSymbol implements ListSymbol{
 
     private final Type t;
-    private static Connector and_Connector = new Connector(Type.AND);
-    private static Connector or_Connector = new Connector(Type.OR);
-    private static Connector not_Connector = new Connector(Type.NOT);
-    private static Connector open_Connector = new Connector(Type.OPEN);
-    private static Connector close_Connector = new Connector(Type.CLOSE);
+    private final String s;
+    private static final Map<Type,Connector> connectorTable;
 
-    private Connector(Type t) {
-        // Type t should not be null
-        this.t = Objects.requireNonNull(t, "type of a Symbol should not be null");
+    static {
+        Map<Type, Connector> initConnectorTable = new HashMap<>();
+        initConnectorTable.put(Type.OR, new Connector(Type.OR, "\u2228"));
+        initConnectorTable.put(Type.AND, new Connector(Type.AND, "\u2227"));
+        initConnectorTable.put(Type.NOT, new Connector(Type.NOT, "\u00ac"));
+        initConnectorTable.put(Type.OPEN, new Connector(Type.OPEN, "("));
+        initConnectorTable.put(Type.CLOSE, new Connector(Type.CLOSE, ")"));
+        connectorTable = Collections.unmodifiableMap(initConnectorTable);
+    }
+
+    private Connector(Type t, String s) {
+        this.t = t;
+        this.s = s;
     }
 
     @Override
@@ -21,62 +31,26 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
         return t;
     }
 
-    //use char connector [  v  ,  ^  ,  ~  ,  (  ,   )  ]
-    //respectively means [  or , and , not , open, close]
-    //if specific connector is null, then create one, else we directly return the existing connector
-    public static final Connector build(char c) throws IllegalArgumentException{
-        if(c == '^'){
-            return and_Connector;
-        }else if(c == 'v'){
-            return or_Connector;
-        }else if(c == '~'){
-            return not_Connector;
-        }else if(c == '('){
-            return open_Connector;
-        }else if(c == ')'){
-            return close_Connector;
-        }else{
-            throw new IllegalArgumentException("Connector Illegal");
+    public static Connector build(Type t) throws IllegalArgumentException{
+        // Type t should not be null
+        switch (Objects.requireNonNull(t, "Type of a connector should not be null")){
+            case AND:
+                return connectorTable.get(Type.AND);
+            case OR:
+                return connectorTable.get(Type.OR);
+            case NOT:
+                return connectorTable.get(Type.NOT);
+            case OPEN:
+                return connectorTable.get(Type.OPEN);
+            case CLOSE:
+                return connectorTable.get(Type.CLOSE);
+            default:
+                //throws exception when argument is illegal
+                throw new IllegalArgumentException("Argument to build connector is invalid");
         }
     }
 
     public String toString(){
-        Type t = this.getType();
-        String s = "";
-        switch (t){
-            case OR:
-                s += "v";
-                break;
-            case AND:
-                s += "^";
-                break;
-            case NOT:
-                s += "~";
-                break;
-            case OPEN:
-                s += "(";
-                break;
-            case CLOSE:
-                s += ")";
-                break;
-            default:
-                assert false:"msg";
-        }
-        return s;
-    }
-
-    //helper function to simplify BooleanList add(Type t)
-    static Connector getConnectorByType(Type t){
-        if(t == Type.OR){
-            return or_Connector;
-        }else if(t == Type.AND){
-            return and_Connector;
-        }else if(t == Type.NOT){
-            return not_Connector;
-        }else if(t == Type.OPEN){
-            return open_Connector;
-        }else{
-            return close_Connector;
-        }
+        return this.s;
     }
 }

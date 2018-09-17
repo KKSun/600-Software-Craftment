@@ -4,6 +4,7 @@ import hw2.parser600.*;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+import sun.jvm.hotspot.utilities.ObjectReader;
 
 import java.util.Iterator;
 import java.util.List;
@@ -22,8 +23,8 @@ public class BooleanListTest {
 
     BooleanList bb = new BooleanList();
     Variable v1 = Variable.build("a");
-    Connector c1 = Connector.build('^');
-    Connector c2 = Connector.build('~');
+    Connector c1 = Connector.build(Type.AND);
+    Connector c2 = Connector.build(Type.NOT);
     Variable v2 = Variable.build("b");
 
     @Before
@@ -57,7 +58,7 @@ public class BooleanListTest {
         Iterator<ListSymbol> i = bb.iterator();
         while(i.hasNext()){
             ListSymbol ls = i.next();
-            System.out.print(ls);
+            System.out.print((ls + " "));
         }
     }
 
@@ -83,8 +84,13 @@ public class BooleanListTest {
      */
     @Test
     public void testToString() {
-        String expected = "a^~b";
-        assertTrue(bb.toString().equals(expected));
+        String expected = "a ∧ ¬ b";
+        assertEquals(bb.toString(), expected);
+        bb.add(Type.AND);
+        bb.add(Variable.build("c"));
+        bb.add(Type.OR);
+        bb.add(Variable.build("d"));
+        System.out.println(bb);
     }
 
 

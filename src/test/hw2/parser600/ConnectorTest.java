@@ -18,12 +18,12 @@ import static org.junit.Assert.*;
  */
 public class ConnectorTest {
 
-    private Connector c1 = Connector.build('^');
-    private Connector c2 = Connector.build('v');
-    private Connector c3 = Connector.build('~');
-    private Connector c4 = Connector.build('(');
-    private Connector c5 = Connector.build(')');
-    private Connector c6 = Connector.build(')');
+    private Connector c1 = Connector.build(Type.AND);
+    private Connector c2 = Connector.build(Type.OR);
+    private Connector c3 = Connector.build(Type.NOT);
+    private Connector c4 = Connector.build(Type.OPEN);
+    private Connector c5 = Connector.build(Type.CLOSE);
+    private Connector c6 = Connector.build(Type.CLOSE);
 
     @Before
     public void before() {
@@ -62,7 +62,7 @@ public class ConnectorTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void testBuild() {
-        Connector.build('m');
+        Connector.build(Type.VARIABLE);
     }
 
     /**

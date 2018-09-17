@@ -41,7 +41,7 @@ public class VariableTest {
     @Test
     public void testRepresentationGetter() {
         String expected = "cc";
-        String s = v.representationGetter();
+        String s = v.getRepresentation();
         assertEquals(s,expected);
     }
 
