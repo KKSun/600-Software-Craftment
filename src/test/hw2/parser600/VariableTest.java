@@ -63,4 +63,12 @@ public class VariableTest {
         assertEquals(expected,s);
     }
 
+    /**
+     * Method: complexity()
+     */
+    @Test
+    public void testComplexity() {
+        assertEquals(v.complexity(), 0);
+    }
+
 } 

@@ -74,5 +74,15 @@ public class ConnectorTest {
         System.out.println(c4.toList().toString());
     }
 
+    /**
+     * Method: complexity()
+     */
+    @Test
+    public void testComplexity() {
+        assertEquals(c1.complexity(), 1);
+        assertEquals(c2.complexity(), 1);
+        assertEquals(c3.complexity(), 0);
+        assertEquals(c5.complexity(), 0);
+    }
 } 
 

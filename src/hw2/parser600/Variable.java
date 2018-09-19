@@ -2,8 +2,8 @@ package hw2.parser600;
 
 import java.util.Objects;
 
-public final class Variable extends AbstractListSymbol implements ListSymbol{
-
+public final class Variable extends AbstractListSymbol implements ListSymbol, TreeSymbol{
+    //code of hw2
     private final String representation;
 
     private Variable(String representation) {
@@ -29,4 +29,14 @@ public final class Variable extends AbstractListSymbol implements ListSymbol{
         return this.getRepresentation();
     }
 
+    // new code of hw3
+    @Override
+    public long complexity() {
+        return 0;
+    }
+
+    @Override
+    public Type getStructure() {
+        return Type.VARIABLE;
+    }
 }

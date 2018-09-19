@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99bb453-4c17-4ce4-9cb4-6b780866df62" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hw2/parser600/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hw2/parser600/Term.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hw2/parser600/TreeSymbol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/BooleanList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/BooleanList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Symbol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Symbol.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Variable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Variable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/test/ConnectorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/test/VariableTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/AbstractListSymbolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/AbstractListSymbolTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/BooleanListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/BooleanListTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/ConnectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/ConnectorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/VariableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/VariableTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw2/parser600/BooleanList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/BooleanList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Variable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/test/ConnectorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/test/VariableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java" afterDir="false" />
@@ -58,13 +57,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractListSymbolTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java">
+      <file leaf-file-name="BooleanList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/BooleanList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="476">
+              <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Term.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Term.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,46 +92,26 @@
       <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="612">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#1827#1828#0" expanded="true" />
-                <element signature="e#1853#1854#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/BooleanList.java">
+      <file leaf-file-name="AbstractTreeSymbol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+            <state relative-caret-position="357">
+              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooleanListTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="91" column="24" lean-forward="true" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#227#228#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,64 +120,63 @@
       <file leaf-file-name="Variable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Variable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="561">
+              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding>
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VariableTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#1449#1450#0" expanded="true" />
-                <element signature="e#1482#1483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Symbol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Symbol.java">
+      <file leaf-file-name="TreeSymbol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/TreeSymbol.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListSymbol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/ListSymbol.java">
+      <file leaf-file-name="Expression.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Expression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+            <state relative-caret-position="656">
+              <caret line="74" column="29" lean-forward="true" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2931#2932#0" expanded="true" />
+                <element signature="e#2980#2981#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpressionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ExpressionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TermTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/TermTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,6 +199,9 @@
     <findStrings>
       <find>throws Exception</find>
       <find>throws exception</find>
+      <find>throws exception</find>
+      <find>(TreeSymbol)</find>
+      <find>aa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,19 +230,28 @@
         <option value="$PROJECT_DIR$/src/hw2/parser600/ListSymbol.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/ConnectorTest.java" />
         <option value="$PROJECT_DIR$/src/hw2/VariableTest.java" />
-        <option value="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/hw2/test/VariableTest.java" />
         <option value="$PROJECT_DIR$/src/hw2/test/ConnectorTest.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/AbstractListSymbol.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Type.java" />
-        <option value="$PROJECT_DIR$/src/hw2/parser600/Variable.java" />
-        <option value="$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java" />
-        <option value="$PROJECT_DIR$/src/hw2/parser600/Connector.java" />
-        <option value="$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java" />
         <option value="$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java" />
-        <option value="$PROJECT_DIR$/src/hw2/parser600/BooleanList.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Connector.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java" />
         <option value="$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Terms.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Variable.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/TermTest.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/AbstractTreeSymbolTest.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/TreeSymbol.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/TermTest.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/ExpressionTest.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/BooleanList.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Expression.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Term.java" />
       </list>
     </option>
   </component>
@@ -341,13 +351,13 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="hw2.parser600" />
       <recent name="hw2.test" />
       <recent name="hw2" />
-      <recent name="hw2.parser600" />
       <recent name="hw1" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -373,11 +383,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BooleanListTest">
+  <component name="RunManager" selected="JUnit.ExpressionTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="AbstractListSymbolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -388,7 +398,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.hw2.parser600" />
-      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.AbstractListSymbolTest" />
+      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.ExpressionTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -400,7 +410,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="BooleanListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpressionTest.testToList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -411,9 +421,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.hw2.parser600" />
-      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.BooleanListTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.ExpressionTest" />
+      <option name="METHOD_NAME" value="testToList" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -423,7 +433,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConnectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpressionTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -434,9 +444,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.hw2.parser600" />
-      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.ConnectorTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.ExpressionTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -446,7 +456,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VariableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TermTest.testToList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -457,9 +467,32 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.hw2.parser600" />
-      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.VariableTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.TermTest" />
+      <option name="METHOD_NAME" value="testToList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TermTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="600_software_craftment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.hw2.parser600.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.hw2.parser600" />
+      <option name="MAIN_CLASS_NAME" value="test.hw2.parser600.TermTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -508,17 +541,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.AbstractListSymbolTest" />
-      <item itemvalue="JUnit.BooleanListTest" />
-      <item itemvalue="JUnit.ConnectorTest" />
-      <item itemvalue="JUnit.VariableTest" />
+      <item itemvalue="JUnit.ExpressionTest.testToList" />
+      <item itemvalue="JUnit.ExpressionTest.testToString" />
+      <item itemvalue="JUnit.TermTest.testToString" />
+      <item itemvalue="JUnit.TermTest.testToList" />
+      <item itemvalue="JUnit.ExpressionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BooleanListTest" />
-        <item itemvalue="JUnit.VariableTest" />
-        <item itemvalue="JUnit.ConnectorTest" />
-        <item itemvalue="JUnit.AbstractListSymbolTest" />
+        <item itemvalue="JUnit.ExpressionTest" />
+        <item itemvalue="JUnit.TermTest.testToString" />
+        <item itemvalue="JUnit.TermTest.testToList" />
+        <item itemvalue="JUnit.ExpressionTest.testToString" />
+        <item itemvalue="JUnit.ExpressionTest.testToList" />
       </list>
     </recent_temporary>
   </component>
@@ -541,44 +576,44 @@
       <workItem from="1536775771473" duration="5220000" />
       <workItem from="1536782086289" duration="622000" />
       <workItem from="1537137731828" duration="412000" />
-      <workItem from="1537140807025" duration="4605000" />
+      <workItem from="1537140807025" duration="36036000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BooleanListTest_testFreeze - 2018.09.17 at 04h 13m 28s.xml">
-      <configuration name="BooleanListTest.testFreeze" configurationId="JUnit" />
+    <history-entry file="TermTest_testToList - 2018.09.19 at 04h 28m 47s.xml">
+      <configuration name="TermTest.testToList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest_testFreeze - 2018.09.17 at 04h 14m 04s.xml">
-      <configuration name="BooleanListTest.testFreeze" configurationId="JUnit" />
+    <history-entry file="TermTest_testToList - 2018.09.19 at 04h 28m 49s.xml">
+      <configuration name="TermTest.testToList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 14m 21s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="TermTest_testToList - 2018.09.19 at 04h 29m 20s.xml">
+      <configuration name="TermTest.testToList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 15m 01s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="TermTest_testToString - 2018.09.19 at 04h 29m 27s.xml">
+      <configuration name="TermTest.testToString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 16m 46s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="TermTest_testToString - 2018.09.19 at 04h 29m 44s.xml">
+      <configuration name="TermTest.testToString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 19m 09s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="ExpressionTest - 2018.09.19 at 04h 30m 15s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 19m 21s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="ExpressionTest - 2018.09.19 at 04h 31m 09s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 22m 33s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="ExpressionTest - 2018.09.19 at 04h 31m 30s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 29m 12s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="ExpressionTest - 2018.09.19 at 04h 31m 58s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BooleanListTest - 2018.09.17 at 04h 31m 20s.xml">
-      <configuration name="BooleanListTest" configurationId="JUnit" />
+    <history-entry file="ExpressionTest - 2018.09.19 at 04h 32m 07s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62505000" />
+    <option name="totallyTimeSpent" value="93936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,7 +647,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43076923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31384614" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.29846153" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17826618" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32820514" />
@@ -703,7 +738,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -711,39 +749,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hw1/hw1.java" />
-    <entry file="file://$PROJECT_DIR$/src/hw1/Generic.java" />
-    <entry file="file://$PROJECT_DIR$/src/hw1/T.java" />
-    <entry file="file://$PROJECT_DIR$/src/hw1/List.java" />
-    <entry file="file://$PROJECT_DIR$/src/hw1/ListImpl.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="452" column="18" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="1218" selection-start-line="1218" selection-end-line="1218" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw1/StreamSol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw1/RecursionSol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -801,13 +806,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hw2/TryTest.java" />
     <entry file="file://$PROJECT_DIR$/src/hw2/Try.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/600_software_craftment.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -905,17 +903,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Type.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="219">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/TermTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1491">
+          <caret line="100" column="15" lean-forward="true" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/AbstractTreeSymbolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Symbol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="85">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -926,67 +989,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Variable.java">
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Type.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/TermTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#1449#1450#0" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/AbstractListSymbolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="181">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/VariableTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ExpressionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#1827#1828#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,30 +1023,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/BooleanList.java">
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        <state relative-caret-position="357">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/BooleanListTest.java">
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="91" column="24" lean-forward="true" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+        <state relative-caret-position="561">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/TreeSymbol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Term.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="74" column="29" lean-forward="true" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2931#2932#0" expanded="true" />
+            <element signature="e#2980#2981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/BooleanList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
           </folding>
         </state>
       </provider>

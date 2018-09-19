@@ -31,6 +31,18 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
         return t;
     }
 
+    private boolean isAndOr(){
+        return this.t == Type.AND || this.t == Type.OR;
+    }
+
+    @Override
+    public long complexity() {
+        if(isAndOr()){
+            return 1;
+        }
+        return 0;
+    }
+
     public static Connector build(Type t) throws IllegalArgumentException{
         // Type t should not be null
         switch (Objects.requireNonNull(t, "Type of a connector should not be null")){

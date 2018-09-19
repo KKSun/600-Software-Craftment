@@ -4,7 +4,6 @@ import hw2.parser600.*;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import sun.jvm.hotspot.utilities.ObjectReader;
 
 import java.util.Iterator;
 import java.util.List;
@@ -91,7 +90,15 @@ public class BooleanListTest {
         bb.add(Type.OR);
         bb.add(Variable.build("d"));
         System.out.println(bb);
+        System.out.println(bb.complexity());
     }
 
+    /**
+     * Method: complexity()
+     */
+    @Test
+    public void testComplexity() {
+        System.out.println(bb.complexity());
+    }
 
 } 

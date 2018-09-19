@@ -20,7 +20,7 @@ public final class BooleanList implements Iterable<ListSymbol> {
         return this.getListRepresentation().iterator();
     }
 
-    public final Boolean add(ListSymbol listSymbol) throws UnsupportedOperationException{
+    public final Boolean add(ListSymbol listSymbol){
         return listRepresentation.add(listSymbol);
     }
 
@@ -33,6 +33,11 @@ public final class BooleanList implements Iterable<ListSymbol> {
     }
 
     public String toString(){
-        return getListRepresentation().stream().map(ListSymbol::toString).collect(Collectors.joining(" "));
+        return getListRepresentation().stream().
+                map(ListSymbol::toString).collect(Collectors.joining(""));
+    }
+
+    public final long complexity(){
+        return getListRepresentation().stream().mapToLong(ListSymbol::complexity).sum();
     }
 }
