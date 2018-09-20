@@ -51,47 +51,37 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
                 new Expression(Type.OR, leftSubexpression, rightSubexpression);
     }
 
+    private final boolean isAndOr(){
+        return this.getStructure() == Type.AND || this.getStructure() == Type.OR;
+    }
 
     public BooleanList toList(){
-        if(this.getStructure() == Type.TERM){
-            return this.getLeftSubexpression().toList();
-        }
-        if(this.getStructure() == Type.NOT){
-            BooleanList nterm = this.getLeftSubexpression().toList();
-            BooleanList res = new BooleanList();
-            res.add(Type.NOT);
-            for(ListSymbol i : nterm) res.add(i);
-            return res;
-        }
-        ListSymbol conj = this.getStructure() == Type.AND ? Connector.build(Type.AND) : Connector.build(Type.OR);
-        BooleanList lex = this.getLeftSubexpression().toList();
-        BooleanList rex = this.getRightSubexpression().toList();
         BooleanList res = new BooleanList();
-        for(ListSymbol i : lex) res.add(i);
-        res.add(conj);
-        for(ListSymbol i : rex) res.add(i);
+
+        if(this.getStructure() == Type.NOT){
+            res.add(Type.NOT);
+        }
+
+        BooleanList left = this.getLeftSubexpression().toList();
+        for(ListSymbol i : left) res.add(i);
+
+        if(isAndOr()){
+            ListSymbol conj = this.getStructure() == Type.AND ? Connector.build(Type.AND) : Connector.build(Type.OR);
+            BooleanList rex = this.getRightSubexpression().toList();
+            for(ListSymbol i : rex) res.add(i);
+        }
+
         return res;
     }
 
 
     public String toString(){
-        //return this.toList().toString();
-        if(this.getStructure() == Type.TERM){
-            return this.getLeftSubexpression().toString();
-        }
-        if(this.getStructure() == Type.NOT){
-            return Connector.build(Type.NOT).toString() + this.getLeftSubexpression().toString();
-        }
-        String con = this.getStructure() == Type.AND ? Connector.build(Type.AND).toString() : Connector.build(Type.OR).toString();
-        return this.getLeftSubexpression().toString() + con + this.getRightSubexpression().toString();
+        return this.toList().toString();
     }
 
 
     public long complexity(){
-        //return this.toList().complexity();
-        long plus = this.getStructure() == Type.AND || this.getStructure() == Type.OR ? 1 : 0;
-        if(this.getStructure() == Type.NOT || this.getStructure() == Type.TERM) return this.getLeftSubexpression().complexity();
-        return this.getLeftSubexpression().complexity() + this.getRightSubexpression().complexity() + plus;
+        return this.toList().complexity();
     }
 
 }

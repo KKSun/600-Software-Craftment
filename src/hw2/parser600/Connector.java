@@ -44,22 +44,8 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
     }
 
     public static Connector build(Type t) throws IllegalArgumentException{
-        // Type t should not be null
-        switch (Objects.requireNonNull(t, "Type of a connector should not be null")){
-            case AND:
-                return connectorTable.get(Type.AND);
-            case OR:
-                return connectorTable.get(Type.OR);
-            case NOT:
-                return connectorTable.get(Type.NOT);
-            case OPEN:
-                return connectorTable.get(Type.OPEN);
-            case CLOSE:
-                return connectorTable.get(Type.CLOSE);
-            default:
-                //throws exception when argument is illegal
-                throw new IllegalArgumentException("Argument to build connector is invalid");
-        }
+        if(!connectorTable.containsKey(t)) throw new IllegalArgumentException("wrong argument, should be a connector");
+        return connectorTable.get(Objects.requireNonNull(t, "Type of a connector should not be null"));
     }
 
     public String toString(){

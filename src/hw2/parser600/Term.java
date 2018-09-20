@@ -35,18 +35,8 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
 
 
     public String toString() {
-        return this.getStructure() == Type.VARIABLE ?
-                this.getSubexpression().toString():
-                "(" + this.getSubexpression().toString() + ")";
-        //return this.toList().toString();
+        return this.toList().toString();
     }
-                                                                //difference of using subexpression directly with through getter????
-                                                                //
-                                                                //
-                                                                //   this is a question ❓
-                                                                //
-                                                                //
-                                                                //what's the meaning of this getSubexpression since subexpression is private?????
 
 
     public long complexity() {
@@ -55,17 +45,14 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
 
 
     public BooleanList toList(){
-        if(this.getStructure() == Type.VARIABLE){
-            BooleanList res = new BooleanList();
-            res.add((Variable) this.getSubexpression());
-            return res;
-        }
         BooleanList res = new BooleanList();
-        res.add(Type.OPEN);
-        for (ListSymbol listSymbol : this.getSubexpression().toList()) {
-            res.add(listSymbol);
+        if(this.getStructure() == Type.VARIABLE){
+            res.add((Variable) this.getSubexpression());
+        }else {
+            res.add(Type.OPEN);
+            for (ListSymbol listSymbol : this.getSubexpression().toList()) res.add(listSymbol);
+            res.add(Type.CLOSE);
         }
-        res.add(Type.CLOSE);
         return res;
     }
 }

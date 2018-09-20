@@ -1,5 +1,6 @@
 package hw2.parser600;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -22,9 +23,6 @@ abstract class AbstractTreeSymbol implements TreeSymbol{
     }
 
     protected static final void validateSubexpression( TreeSymbol subexpression, Type expectedType, String subexpressionDescription){
-        Objects.requireNonNull(subexpression, subexpressionDescription + ": subexpression should not be null");
-        if(subexpression.getType() != expectedType){
-            throw new IllegalArgumentException(subexpressionDescription + ": type of subexpression is wrong");
-        }
+        validateSubexpression(subexpression, new HashSet<Type>(){{add(expectedType);}}, subexpressionDescription);
     }
 }
