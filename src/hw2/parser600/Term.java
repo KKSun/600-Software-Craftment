@@ -50,7 +50,7 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
             res.add((Variable) this.getSubexpression());
         }else {
             res.add(Type.OPEN);
-            for (ListSymbol listSymbol : this.getSubexpression().toList()) res.add(listSymbol);
+            res.addAll(this.getSubexpression().toList());
             res.add(Type.CLOSE);
         }
         return res;

@@ -8,7 +8,7 @@ import java.util.Objects;
 public final class Connector extends AbstractListSymbol implements ListSymbol{
 
     private final Type t;
-    private final String s;
+    private final String representation;
     private static final Map<Type,Connector> connectorTable;
 
     static {
@@ -21,9 +21,9 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
         connectorTable = Collections.unmodifiableMap(initConnectorTable);
     }
 
-    private Connector(Type t, String s) {
+    private Connector(Type t, String representation) {
         this.t = t;
-        this.s = s;
+        this.representation = representation;
     }
 
     @Override
@@ -37,10 +37,7 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
 
     @Override
     public long complexity() {
-        if(isAndOr()){
-            return 1;
-        }
-        return 0;
+        return isAndOr() ? 1 : 0;
     }
 
     public static Connector build(Type t) throws IllegalArgumentException{
@@ -49,6 +46,6 @@ public final class Connector extends AbstractListSymbol implements ListSymbol{
     }
 
     public String toString(){
-        return this.s;
+        return this.representation;
     }
 }

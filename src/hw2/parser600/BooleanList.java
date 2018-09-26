@@ -28,6 +28,12 @@ public final class BooleanList implements Iterable<ListSymbol> {
         return listRepresentation.add(Connector.build(type));
     }
 
+    public final void addAll(BooleanList list){
+        for(ListSymbol each : list){
+            listRepresentation.add(each);
+        }
+    }
+
     public final void freeze(){
         listRepresentation = Collections.unmodifiableList(listRepresentation);
     }
