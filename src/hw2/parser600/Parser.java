@@ -8,40 +8,28 @@ public final class Parser {
     private static final List<Reduction> reductionList;
 
     static {
-        Function<List<Symbol>, TreeSymbol> f1 = ls -> Term.build(ls.get(ls.size()-1));
-        Function<List<Symbol>, TreeSymbol> f2 = ls -> Term.build(ls.get(ls.size()-2));
-        Function<List<Symbol>, TreeSymbol> f3 = ls -> Expression.build(false,ls.get(ls.size()-1));
-        Function<List<Symbol>, TreeSymbol> f4 = ls -> Expression.build(true, ls.get(ls.size()-1));
-        Function<List<Symbol>, TreeSymbol> f5 = ls -> Expression.build(true,  ls.get(ls.size()-3), ls.get(ls.size()-1));
-        Function<List<Symbol>, TreeSymbol> f6 = ls -> Expression.build(false, ls.get(ls.size()-3), ls.get(ls.size()-1));
+        Function<List<Symbol>, TreeSymbol> fvarToTerm = ls -> Term.build(ls.get(ls.size()-1));
+        Function<List<Symbol>, TreeSymbol> fbExToTerm = ls -> Term.build(ls.get(ls.size()-2));
+        Function<List<Symbol>, TreeSymbol> fnTermToEx = ls -> Expression.build(false,ls.get(ls.size()-1));
+        Function<List<Symbol>, TreeSymbol> ftTermToEx = ls -> Expression.build(true, ls.get(ls.size()-1));
+        Function<List<Symbol>, TreeSymbol> fndExpToEx = ls -> Expression.build(true,  ls.get(ls.size()-3), ls.get(ls.size()-1));
+        Function<List<Symbol>, TreeSymbol> forExpToEx = ls -> Expression.build(false, ls.get(ls.size()-3), ls.get(ls.size()-1));
 
-        List<Type> pattern1 = new ArrayList<Type>(){{
-            add(Type.VARIABLE);
-        }};
-        List<Type> pattern2 = new ArrayList<Type>(){{
-            add(Type.OPEN);add(Type.EXPRESSION);add(Type.CLOSE);
-        }};
-        List<Type> pattern3 = new ArrayList<Type>(){{
-            add(Type.NOT);add(Type.TERM);
-        }};
-        List<Type> pattern4 = new ArrayList<Type>(){{
-            add(Type.TERM);
-        }};
-        List<Type> pattern5 = new ArrayList<Type>(){{
-            add(Type.EXPRESSION);add(Type.AND);add(Type.EXPRESSION);
-        }};
-        List<Type> pattern6 = new ArrayList<Type>(){{
-            add(Type.EXPRESSION);add(Type.OR);add(Type.EXPRESSION);
-        }};
+        List<Type> pVarToTerm = new ArrayList<Type>(){{ add(Type.VARIABLE); }};
+        List<Type> pBExToTerm = new ArrayList<Type>(){{ add(Type.OPEN);add(Type.EXPRESSION);add(Type.CLOSE); }};
+        List<Type> pNTermToEx = new ArrayList<Type>(){{ add(Type.NOT);add(Type.TERM); }};
+        List<Type> pTTermToEx = new ArrayList<Type>(){{ add(Type.TERM); }};
+        List<Type> pNdExpToEx = new ArrayList<Type>(){{ add(Type.EXPRESSION);add(Type.AND);add(Type.EXPRESSION); }};
+        List<Type> pOrExpToEx = new ArrayList<Type>(){{ add(Type.EXPRESSION);add(Type.OR);add(Type.EXPRESSION); }};
 
         List<Reduction> reductionsList = new ArrayList<Reduction>(){{
-                add(Reduction.build(pattern1, f1));
-                add(Reduction.build(pattern2, f2));
-                add(Reduction.build(pattern3, f3));
-                add(Reduction.build(pattern4, f4));
-                add(Reduction.build(pattern5, f5));
-                add(Reduction.build(pattern6, f6));
-            }};
+                add(Reduction.build(pVarToTerm, fvarToTerm));
+                add(Reduction.build(pBExToTerm, fbExToTerm));
+                add(Reduction.build(pNTermToEx, fnTermToEx));
+                add(Reduction.build(pTTermToEx, ftTermToEx));
+                add(Reduction.build(pNdExpToEx, fndExpToEx));
+                add(Reduction.build(pOrExpToEx, forExpToEx));
+        }};
         reductionList = Collections.unmodifiableList(reductionsList);
     }
 
@@ -50,37 +38,26 @@ public final class Parser {
 
         for(ListSymbol symbol : input){
             workingList.add(symbol);
-            if(noNeedParse(symbol.getType())) break;
             for(Reduction reduction : reductionList){
-                if(match(reduction, workingList)){
-                    reduction(reduction, workingList);
-                }
+                matchAndApply(reduction, workingList);
             }
         }
 
         return State.build(workingList);
     }
 
-    private static boolean match(Reduction reduction, List<Symbol> workingList){
+    private static void matchAndApply(Reduction reduction, List<Symbol> workingList){
         int size = reduction.size();
         int len = workingList.size();
-        if(len < size) return false;
+        if(len < size) return;
         List<Type> typeList = new ArrayList<>();
-        for(int i = len-size; i < len; i++){
-            typeList.add(workingList.get(i).getType());
+        for(Symbol symbol : workingList.subList(len-size,len)){
+            typeList.add(symbol.getType());
         }
-        return reduction.matches(typeList);
+        if(reduction.matches(typeList)){
+            workingList.add(reduction.apply(workingList));
+            workingList.subList(len-size,len).clear();
+        }
     }
 
-    private static void reduction(Reduction reduction, List<Symbol> workingList){
-        int size = reduction.size();
-        int len = workingList.size();
-        workingList.add(reduction.apply(workingList));
-        workingList.subList(len-size,len).clear();
-    }
-
-
-    private static boolean noNeedParse(Type type){
-        return type == Type.OR || type == Type.AND || type == Type.OPEN || type == Type.NOT;
-    }
 }

@@ -45,7 +45,20 @@ public class ParserTest {
      */
     @Test
     public void testParse() throws Exception {
-        System.out.println(anb.toList());
+        BooleanList lll = new BooleanList();
+        lll.addAll(teAomAcB.toList());
+        State s = Parser.parse(lll);
+        System.out.println(s.getExpression());
+        System.out.println(s.getExpression().getType());
+        System.out.println(s.isCorrect());
+        System.out.println(s.getWorkingList().size());
+        BooleanList llll = new BooleanList();
+        llll.addAll(lll);
+        llll.add(Type.OPEN);
+        State ss = Parser.parse(llll);
+        System.out.println(ss.getExpression());
+        System.out.println(ss.isCorrect());
+        System.out.println(ss.getWorkingList().size());
     }
 
 } 

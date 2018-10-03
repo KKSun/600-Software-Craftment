@@ -25,19 +25,8 @@ public final class State {
         return new ArrayList<>(workingList);
     }
 
-    public final Expression getExpression() throws IllegalAccessException {
-        if(correct){
-            return (Expression) workingList.get(0);
-        }else{
-            throw new IllegalAccessException("cannot access expression since parsing not done");
-        }
+    public final Expression getExpression(){
+        return correct ? (Expression) workingList.get(0) : null;
     }
 
-    public String toString(){
-        try {
-            return this.getExpression().toString();
-        }catch (IllegalAccessException e){
-            return null;
-        }
-    }
 }

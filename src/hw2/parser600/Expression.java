@@ -66,9 +66,8 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
         res.addAll(left);
 
         if(isAndOr()){
-            ListSymbol conj = this.getStructure() == Type.AND ? Connector.build(Type.AND) : Connector.build(Type.OR);
             BooleanList right = this.getRightSubexpression().toList();
-            res.add(conj);
+            res.add(this.getStructure());
             res.addAll(right);
         }
 

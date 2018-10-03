@@ -29,13 +29,7 @@ final class Reduction {
     }
 
     final boolean matches(List<Type> typeList){
-        if(typeList.size() != size()) return false;
-        for(int i = 0; i < size(); i++){
-            if(pattern.get(i) != typeList.get(i)){
-                return false;
-            }
-        }
-        return true;
+        return pattern.equals(typeList);
     }
 
 }
