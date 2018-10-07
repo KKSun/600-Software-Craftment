@@ -22,7 +22,7 @@ abstract class AbstractTreeSymbol implements TreeSymbol{
         }
     }
 
-    protected static final void validateSubexpression( TreeSymbol subexpression, Type expectedType, String subexpressionDescription){
+    protected static final void validateSubexpression( Symbol subexpression, Type expectedType, String subexpressionDescription){
         validateSubexpression(subexpression, new HashSet<Type>(){{add(expectedType);}}, subexpressionDescription);
     }
 }

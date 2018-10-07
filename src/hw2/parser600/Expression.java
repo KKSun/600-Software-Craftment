@@ -1,7 +1,6 @@
 package hw2.parser600;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
 
@@ -10,21 +9,21 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
     }
 
 
-    private final TreeSymbol leftSubexpression;
-    private final TreeSymbol rightSubexpression;
+    private final Symbol leftSubexpression;
+    private final Symbol rightSubexpression;
 
-    final TreeSymbol getLeftSubexpression() {
+    public final Symbol getLeftSubexpression() {
         return leftSubexpression;
     }
-    final TreeSymbol getRightSubexpression() {
+    final Symbol getRightSubexpression() {
         return rightSubexpression;
     }
 
 
     private Expression(Type structure, Symbol leftSubexpression, Symbol rightSubexpression){
         super(structure);
-        this.leftSubexpression = (TreeSymbol) leftSubexpression;
-        this.rightSubexpression = (TreeSymbol) rightSubexpression;
+        this.leftSubexpression = leftSubexpression;
+        this.rightSubexpression = rightSubexpression;
     }
 
 
@@ -43,8 +42,8 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
 
     public static final Expression build(boolean isConjunction, Symbol leftSubexpression, Symbol rightSubexpression){
         //valid the input first
-        AbstractTreeSymbol.validateSubexpression((TreeSymbol) leftSubexpression, Type.EXPRESSION,"test valid left subexpression");
-        AbstractTreeSymbol.validateSubexpression((TreeSymbol) rightSubexpression, Type.EXPRESSION,"test valid right subexpression");
+        AbstractTreeSymbol.validateSubexpression(leftSubexpression,  Type.EXPRESSION,"test valid left subexpression");
+        AbstractTreeSymbol.validateSubexpression(rightSubexpression, Type.EXPRESSION,"test valid right subexpression");
         //return conjunction when input type is AND or else
         return isConjunction ?
                 new Expression(Type.AND, leftSubexpression, rightSubexpression):
@@ -82,6 +81,27 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
 
     public long complexity(){
         return this.toList().complexity();
+    }
+
+    @Override
+    public Optional<Symbol> subterm() {
+        return getLeftSubexpression().subterm();
+    }
+
+
+    @Override
+    public Symbol simplified() {
+        if(this.getStructure() == Type.TERM) {
+            Symbol innerTerm = getLeftSubexpression();
+            Symbol s = Expression.build(true, innerTerm.simplified());
+            return s;
+        }
+        if(isAndOr()){
+            boolean conj = this.getStructure() == Type.AND;
+            Symbol s = Expression.build(conj, getLeftSubexpression().simplified(), getRightSubexpression().simplified());
+            return s;
+        }
+        return this;
     }
 
 }

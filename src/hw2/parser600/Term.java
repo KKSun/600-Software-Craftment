@@ -1,6 +1,7 @@
 package hw2.parser600;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public final class Term extends AbstractTreeSymbol implements TreeSymbol {
@@ -54,5 +55,17 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
             res.add(Type.CLOSE);
         }
         return res;
+    }
+
+    @Override
+    public Optional<Symbol> subterm() {
+        return this.getType() == Type.EXPRESSION ? Optional.of(this.getSubexpression()) : Optional.empty();
+    }
+
+    @Override
+    public Symbol simplified() {
+//        if(this.getStructure() == Type.VARIABLE) return build(this.getSubexpression());
+//        return this.subterm().simplified();
+        return null;
     }
 }

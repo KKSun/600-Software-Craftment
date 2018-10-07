@@ -19,6 +19,7 @@ public class ParserTest {
     Term ta = Term.build(a);
     Expression ena = Expression.build(false, ta);
     Variable b = Variable.build("b");
+    Variable c = Variable.build("c");
     Term tb = Term.build(b);
     Expression eb = Expression.build(true, tb);
     Expression ccc = Expression.build(true, eb, ena);
@@ -52,6 +53,7 @@ public class ParserTest {
         System.out.println(s.getExpression().getType());
         System.out.println(s.isCorrect());
         System.out.println(s.getWorkingList().size());
+        System.out.println("---------------");
         BooleanList llll = new BooleanList();
         llll.addAll(lll);
         llll.add(Type.OPEN);
@@ -59,6 +61,32 @@ public class ParserTest {
         System.out.println(ss.getExpression());
         System.out.println(ss.isCorrect());
         System.out.println(ss.getWorkingList().size());
+        System.out.println("---------------");
+        ll.add(Type.OPEN);
+        ll.add(Type.OPEN);
+        ll.add(a);
+        ll.add(Type.AND);
+        ll.add(Type.OPEN);
+        ll.add(Type.OPEN);
+        ll.add(Type.NOT);
+        ll.add(Type.OPEN);
+        ll.add(c);
+        ll.add(Type.OR);
+        ll.add(b);
+        ll.add(Type.CLOSE);
+        ll.add(Type.CLOSE);
+        ll.add(Type.CLOSE);
+        ll.add(Type.CLOSE);
+        ll.add(Type.CLOSE);
+        State sss = Parser.parse(ll);
+        System.out.println(sss.getExpression());
+        System.out.println(sss.getExpression().getStructure());
+        System.out.println(sss.getExpression().getType());
+        System.out.println(sss.isCorrect());
+        System.out.println(sss.getWorkingList());
+        System.out.println(sss.getExpression().simplified());
+        System.out.println("---------------");
+        System.out.println(tb.simplified());
     }
 
 } 

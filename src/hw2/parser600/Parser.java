@@ -49,11 +49,14 @@ public final class Parser {
     private static void matchAndApply(Reduction reduction, List<Symbol> workingList){
         int size = reduction.size();
         int len = workingList.size();
-        if(len < size) return;
+        if(len < size)
+            return;
+
         List<Type> typeList = new ArrayList<>();
         for(Symbol symbol : workingList.subList(len-size,len)){
             typeList.add(symbol.getType());
         }
+
         if(reduction.matches(typeList)){
             workingList.add(reduction.apply(workingList));
             workingList.subList(len-size,len).clear();
