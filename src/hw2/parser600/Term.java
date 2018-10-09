@@ -35,11 +35,6 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
     }
 
 
-    public String toString() {
-        return this.toList().toString();
-    }
-
-
     public long complexity() {
         return this.getSubexpression().complexity();
     }
@@ -57,13 +52,17 @@ public final class Term extends AbstractTreeSymbol implements TreeSymbol {
         return res;
     }
 
+    public String toString(){
+        return this.getSubexpression().toString();
+    }
+
     @Override
     public Optional<Symbol> subterm() {
-        return null;
+        return this.getSubexpression().getType() == Type.VARIABLE ? Optional.empty() : Optional.of(this.getSubexpression().simplified());
     }
 
     @Override
     public Symbol simplified() {
-        return null;
+        return this.subterm().orElse(this);
     }
 }

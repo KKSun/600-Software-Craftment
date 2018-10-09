@@ -74,24 +74,35 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
     }
 
 
-    public String toString(){
-        return this.toList().toString();
-    }
-
-
     public long complexity(){
         return this.toList().complexity();
     }
 
+
     @Override
     public Optional<Symbol> subterm() {
-        return null;
+        return Optional.ofNullable(this.getRightSubexpression());
     }
 
 
     @Override
     public Symbol simplified() {
-        return null;
+        Type type = this.getStructure();
+        return new Expression(type, this.getLeftSubexpression().simplified(), this.subterm().map(Symbol::simplified).orElse(null));
+    }
+
+//    public String toString(){
+//        return this.toList().toString();
+//    }
+
+    public String toString(){
+        if(this.getStructure() == Type.TERM){
+            return this.getLeftSubexpression().toString();
+        }
+        if(this.getStructure() == Type.NOT){
+            return this.getStructure().toString() + "\n" + this.getLeftSubexpression().toString();
+        }
+        return this.getStructure().toString() + "\n" + this.getLeftSubexpression().toString() + " " + this.getRightSubexpression().toString();
     }
 
 }
