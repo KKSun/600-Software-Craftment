@@ -84,9 +84,6 @@ public class ParserTest {
         System.out.println(sss.getExpression().getType());
         System.out.println(sss.isCorrect());
         System.out.println(sss.getWorkingList());
-        System.out.println(sss.getExpression().simplified());
-        System.out.println("---------------");
-        System.out.println(tb.simplified());
     }
 
 } 

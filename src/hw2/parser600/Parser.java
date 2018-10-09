@@ -2,10 +2,12 @@ package hw2.parser600;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public final class Parser {
 
     private static final List<Reduction> reductionList;
+    private static final List<List<Type>> typeListList;
 
     static {
         Function<List<Symbol>, TreeSymbol> fvarToTerm = ls -> Term.build(ls.get(ls.size()-1));
@@ -22,13 +24,23 @@ public final class Parser {
         List<Type> pNdExpToEx = new ArrayList<Type>(){{ add(Type.EXPRESSION);add(Type.AND);add(Type.EXPRESSION); }};
         List<Type> pOrExpToEx = new ArrayList<Type>(){{ add(Type.EXPRESSION);add(Type.OR);add(Type.EXPRESSION); }};
 
+        List<List<Type>> typesListList = new ArrayList<List<Type>>(){{
+           add(pVarToTerm);
+           add(pBExToTerm);
+           add(pNTermToEx);
+           add(pTTermToEx);
+           add(pNdExpToEx);
+           add(pOrExpToEx);
+        }};
+        typeListList = Collections.unmodifiableList(typesListList);
+
         List<Reduction> reductionsList = new ArrayList<Reduction>(){{
-                add(Reduction.build(pVarToTerm, fvarToTerm));
-                add(Reduction.build(pBExToTerm, fbExToTerm));
-                add(Reduction.build(pNTermToEx, fnTermToEx));
-                add(Reduction.build(pTTermToEx, ftTermToEx));
-                add(Reduction.build(pNdExpToEx, fndExpToEx));
-                add(Reduction.build(pOrExpToEx, forExpToEx));
+            add(Reduction.build(pVarToTerm, fvarToTerm));
+            add(Reduction.build(pBExToTerm, fbExToTerm));
+            add(Reduction.build(pNTermToEx, fnTermToEx));
+            add(Reduction.build(pTTermToEx, ftTermToEx));
+            add(Reduction.build(pNdExpToEx, fndExpToEx));
+            add(Reduction.build(pOrExpToEx, forExpToEx));
         }};
         reductionList = Collections.unmodifiableList(reductionsList);
     }
@@ -38,24 +50,37 @@ public final class Parser {
 
         for(ListSymbol symbol : input){
             workingList.add(symbol);
-            for(Reduction reduction : reductionList){
-                matchAndApply(reduction, workingList);
+            while(reductable(workingList)) {
+                for (Reduction reduction : reductionList) {
+                    matchAndApply(reduction, workingList);
+                }
             }
         }
 
         return State.build(workingList);
     }
 
+    private static boolean reductable(List<Symbol> workingList) {
+        boolean reductable = false;
+        for(List<Type> subList : typeListList){
+            int size = subList.size();
+            int len = workingList.size();
+            if(len < size) return false;
+
+            List<Type> typeList = workingList.subList(len - size, len).stream().map(Symbol::getType).collect(Collectors.toList());
+
+            reductable = typeList.equals(subList);
+            if(reductable) break;
+        }
+        return reductable;
+    }
+
     private static void matchAndApply(Reduction reduction, List<Symbol> workingList){
         int size = reduction.size();
         int len = workingList.size();
-        if(len < size)
-            return;
+        if(len < size) return;
 
-        List<Type> typeList = new ArrayList<>();
-        for(Symbol symbol : workingList.subList(len-size,len)){
-            typeList.add(symbol.getType());
-        }
+        List<Type> typeList = workingList.subList(len - size, len).stream().map(Symbol::getType).collect(Collectors.toList());
 
         if(reduction.matches(typeList)){
             workingList.add(reduction.apply(workingList));

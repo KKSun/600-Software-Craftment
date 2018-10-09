@@ -85,23 +85,13 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
 
     @Override
     public Optional<Symbol> subterm() {
-        return getLeftSubexpression().subterm();
+        return null;
     }
 
 
     @Override
     public Symbol simplified() {
-        if(this.getStructure() == Type.TERM) {
-            Symbol innerTerm = getLeftSubexpression();
-            Symbol s = Expression.build(true, innerTerm.simplified());
-            return s;
-        }
-        if(isAndOr()){
-            boolean conj = this.getStructure() == Type.AND;
-            Symbol s = Expression.build(conj, getLeftSubexpression().simplified(), getRightSubexpression().simplified());
-            return s;
-        }
-        return this;
+        return null;
     }
 
 }

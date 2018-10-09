@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99bb453-4c17-4ce4-9cb4-6b780866df62" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HW6/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HW6/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HW6/Zombie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HW6/Zombies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractListSymbol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractListSymbol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractTreeSymbol$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractTreeSymbol$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractTreeSymbol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/AbstractTreeSymbol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Expression$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Expression$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Expression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Symbol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Symbol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Term$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Term$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Term.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Term.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Variable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/hw2/parser600/Variable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/test/hw2/parser600/ParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/AbstractListSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/AbstractListSymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Expression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Symbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/parser600/Term.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/parser600/Term.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,24 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Expression.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Expression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
-              <folding>
-                <element signature="e#2646#2647#0" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ParserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+            <state relative-caret-position="212">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,80 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Reduction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Reduction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="709">
+              <caret line="82" column="126" selection-start-line="82" selection-start-column="126" selection-end-line="82" selection-end-column="126" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListSymbol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/ListSymbol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Symbol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Symbol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Term.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Term.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Zombies.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="81" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Zombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HW6/Zombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Human.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HW6/Human.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HW6/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -221,7 +129,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Reduction.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/State.java" />
-        <option value="$PROJECT_DIR$/src/hw2/parser600/Parser.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/TreeSymbol.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Variable.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Connector.java" />
@@ -229,7 +136,6 @@
         <option value="$PROJECT_DIR$/src/hw2/parser600/AbstractListSymbol.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/BooleanList.java" />
-        <option value="$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Expression.java" />
         <option value="$PROJECT_DIR$/src/HW6/ZombiesOnWall.java" />
         <option value="$PROJECT_DIR$/src/hw2/parser600/Term.java" />
@@ -237,6 +143,8 @@
         <option value="$PROJECT_DIR$/src/HW6/Zombie.java" />
         <option value="$PROJECT_DIR$/src/HW6/Zombies.java" />
         <option value="$PROJECT_DIR$/src/HW6/Game.java" />
+        <option value="$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java" />
+        <option value="$PROJECT_DIR$/src/hw2/parser600/Parser.java" />
       </list>
     </option>
   </component>
@@ -294,7 +202,7 @@
               <item name="600_software_craftment" type="b2602c69:ProjectViewProjectNode" />
               <item name="600_software_craftment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HW6" type="462c0819:PsiDirectoryNode" />
+              <item name="parser600" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="600_software_craftment" type="b2602c69:ProjectViewProjectNode" />
@@ -377,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Game">
+  <component name="RunManager" selected="JUnit.ParserTest">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HW6.Game" />
       <module name="600_software_craftment" />
@@ -507,8 +415,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Game" />
         <item itemvalue="JUnit.ParserTest" />
+        <item itemvalue="Application.Game" />
         <item itemvalue="JUnit.TermTest" />
         <item itemvalue="JUnit.ExpressionTest" />
       </list>
@@ -548,44 +456,44 @@
       <workItem from="1538755280436" duration="644000" />
       <workItem from="1538853177598" duration="16231000" />
       <workItem from="1538936371037" duration="2876000" />
-      <workItem from="1538939378415" duration="1578000" />
+      <workItem from="1538939378415" duration="7864000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ParserTest - 2018.10.03 at 13h 20m 23s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 36m 41s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 21m 14s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 46m 33s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 22m 16s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 46m 35s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 22m 41s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 49m 35s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 23m 08s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 53m 52s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 30m 52s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 55m 07s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 32m 22s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 57m 54s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 32m 43s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 00h 58m 32s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 32m 52s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 01h 00m 07s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParserTest - 2018.10.03 at 13h 33m 19s.xml">
+    <history-entry file="ParserTest - 2018.10.09 at 01h 00m 52s.xml">
       <configuration name="ParserTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195038000" />
+    <option name="totallyTimeSpent" value="201324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +527,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29948717" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29948717" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.29846153" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1984127" />
@@ -714,7 +622,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -722,29 +630,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hw1/SolutionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw1/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/test/VariableTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/ConnectorTest.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/requests/FilterRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw1/RecursionSol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -819,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -844,13 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
@@ -875,24 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Reduction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -907,13 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -938,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ExpressionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ConnectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -959,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw2/parser600/AbstractListSymbol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -973,41 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
-          <folding>
-            <element signature="e#2646#2647#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hw2/parser600/ListSymbol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,8 +856,132 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="1615">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="227" selection-start-line="227" selection-end-line="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/AbstractTreeSymbol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="e#2646#2647#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ExpressionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1064">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/reflect/InvocationTargetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/ReflectiveOperationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#2530#2531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#3201#3202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/hw2/parser600/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Reduction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw2/parser600/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="82" column="126" selection-start-line="82" selection-start-column="126" selection-end-line="82" selection-end-column="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
