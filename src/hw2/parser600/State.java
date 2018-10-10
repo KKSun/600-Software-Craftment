@@ -28,5 +28,4 @@ public final class State {
     public final Expression getExpression(){
         return correct ? (Expression) workingList.get(0) : null;
     }
-
 }

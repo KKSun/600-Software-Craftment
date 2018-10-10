@@ -100,9 +100,9 @@ public final class Expression extends AbstractTreeSymbol implements TreeSymbol{
             return this.getLeftSubexpression().toString();
         }
         if(this.getStructure() == Type.NOT){
-            return this.getStructure().toString() + "\n" + this.getLeftSubexpression().toString();
+            return this.getStructure().toString() + " " + this.getLeftSubexpression().toString();
         }
-        return this.getStructure().toString() + "\n" + this.getLeftSubexpression().toString() + " " + this.getRightSubexpression().toString();
+        return this.getStructure().toString() + " " + this.getLeftSubexpression().toString() + " " + this.getRightSubexpression().toString();
     }
 
 }
