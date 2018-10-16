@@ -1,4 +1,7 @@
-package HW6;
+package hw6_side;
+
+import HW6.Zombie;
+import HW6.Zombies;
 
 import java.util.Arrays;
 
@@ -20,11 +23,12 @@ public class Game {
 
         zombies.insert(Zombie.build(), 1, 1);
         zombies.insert(Zombie.build(), 2, 2);
-        zombies.insert(Zombie.build(), 4, 1);
+        zombies.insert(Zombie.build(2,5), 4, 1);
         zombies.insert(Zombie.build(), 4, 10);
         zombies.insert(Zombie.build(), 4, 80);
         zombies.insert(Zombie.build(), 4, 3);
         zombies.insert(Zombie.build(), 5, 6);
+//        zombies.insert(Zombie.build(), 5, 6);
         zombies.insert(Zombie.build(), 5, 22);
         zombies.insert(Zombie.build(), 6, 12);
         zombies.insert(Zombie.build(), 6, 8);

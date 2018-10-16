@@ -1,4 +1,4 @@
-package HW6;
+package hw6_side;
 
 public class Human {
 
