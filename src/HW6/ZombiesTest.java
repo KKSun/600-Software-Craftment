@@ -1,11 +1,14 @@
 package HW6;
 
+import HW6.Zombie;
+import HW6.Zombies;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
 
 import static org.junit.Assert.*;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 /**
@@ -21,18 +24,18 @@ public class ZombiesTest {
 
     @Before
     public void before() throws Exception {
-        zombies.insert(Zombie.build(), 1, 1);
-        zombies.insert(Zombie.build(), 2, 2);
-        zombies.insert(Zombie.build(2, 5), 4, 1);
-        zombies.insert(Zombie.build(), 4, 10);
-        zombies.insert(Zombie.build(), 4, 80);
-        zombies.insert(Zombie.build(), 4, 3);
-        zombies.insert(Zombie.build(), 5, 6);
-        zombies.insert(Zombie.build(), 5, 22);
-        zombies.insert(Zombie.build(), 6, 12);
-        zombies.insert(Zombie.build(), 6, 8);
-        zombies.insert(Zombie.build(), 7, 28);
-        zombies.insert(Zombie.build(), 10, 2);
+        zombies.insert(Zombie.build(), BigInteger.valueOf(1), BigInteger.valueOf(1));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(2), BigInteger.valueOf(2));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(4), BigInteger.valueOf(1));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(4), BigInteger.valueOf(10));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(4), BigInteger.valueOf(80));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(4), BigInteger.valueOf(3));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(5), BigInteger.valueOf(6));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(5), BigInteger.valueOf(22));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(6), BigInteger.valueOf(12));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(6), BigInteger.valueOf(8));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(7), BigInteger.valueOf(28));
+        zombies.insert(Zombie.build(), BigInteger.valueOf(10), BigInteger.valueOf(2));
     }
 
     @After
@@ -45,9 +48,9 @@ public class ZombiesTest {
      */
     @Test
     public void testInsert() throws Exception {
-        int temp = zombies.zombie(6, 12).hashCode();
-        zombies.insert(zombies.delete(6, 12), 6, 4);
-        assertEquals(temp, zombies.zombie(6, 4).hashCode());
+        int temp = zombies.zombie(BigInteger.valueOf(6), BigInteger.valueOf(12)).hashCode();
+        zombies.insert(zombies.delete(BigInteger.valueOf(6), BigInteger.valueOf(12)), BigInteger.valueOf(6), BigInteger.valueOf(4));
+        assertEquals(temp, zombies.zombie(BigInteger.valueOf(6), BigInteger.valueOf(4)).hashCode());
     }
 
     /**
@@ -55,7 +58,7 @@ public class ZombiesTest {
      */
     @Test
     public void testZombie() throws Exception {
-        assertEquals(zombies.zombie(5, 22).hashCode(), zombies.delete(5, 22).hashCode());
+        assertEquals(zombies.zombie(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode(), zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode());
     }
 
     /**
@@ -63,8 +66,8 @@ public class ZombiesTest {
      */
     @Test
     public void testDelete() throws Exception {
-        Zombie zz1 = zombies.zombie(5, 6);
-        Zombie zz2 = zombies.delete(5, 6);
+        Zombie zz1 = zombies.zombie(BigInteger.valueOf(5), BigInteger.valueOf(6));
+        Zombie zz2 = zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(6));
         assertEquals(zz1, zz2);
     }
 
@@ -73,7 +76,10 @@ public class ZombiesTest {
      */
     @Test
     public void testJavelin() throws Exception {
-        assertEquals("[4, 80]", Arrays.toString(zombies.javelin(4)));
+        zombies.insert(zombies.delete(BigInteger.valueOf(4),BigInteger.valueOf(10)), BigInteger.valueOf(10), BigInteger.valueOf(12));
+        assertEquals("[4, 80]", Arrays.toString(zombies.javelin(BigInteger.valueOf(4))));
+        assertEquals("[2, 2]", Arrays.toString(zombies.javelin(BigInteger.valueOf(2))));
+        assertEquals("[10, 12]", Arrays.toString(zombies.javelin(BigInteger.valueOf(10))));
     }
 
     /**
@@ -90,7 +96,9 @@ public class ZombiesTest {
      */
     @Test
     public void testBomb() throws Exception {
-        assertEquals("[4, 80]", Arrays.toString(zombies.bomb(5, 5)));
+        assertEquals("[4, 80]", Arrays.toString(zombies.bomb(BigInteger.valueOf(5), BigInteger.valueOf(5))));
+        zombies.delete(BigInteger.valueOf(4),BigInteger.valueOf(80));
+        assertEquals("[7, 28]", Arrays.toString(zombies.bomb(BigInteger.valueOf(4), BigInteger.valueOf(3))));
     }
 
 
@@ -99,7 +107,18 @@ public class ZombiesTest {
      */
     @Test(expected = IllegalArgumentException.class)
     public void testCheckInLine() throws Exception {
-        zombies.insert(Zombie.build(), 1, 1);
+        zombies.insert(Zombie.build(), BigInteger.valueOf(1), BigInteger.valueOf(1));
     }
 
+    /**
+     * Method: toString()
+     */
+    @Test
+    public void testToString() throws Exception {
+        zombies.clearAll();
+        zombies.insert(Zombie.build(), BigInteger.valueOf(1),BigInteger.valueOf(8));
+        zombies.insert(Zombie.build(),BigInteger.valueOf(5),BigInteger.valueOf(3));
+        assertEquals("Key: 1  \tValue: [[1,8]]\n" +
+                "Key: 5  \tValue: [[5,3]]\n", zombies.toString());
+    }
 }
