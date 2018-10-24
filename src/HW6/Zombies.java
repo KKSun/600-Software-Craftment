@@ -87,9 +87,7 @@ public class Zombies {
 
         BigInteger x = checkInBound(xp);
 
-        Zombie z = Objects.requireNonNull(zombies_map.get(x).peek(), "what? a null zombie?");
-
-        return z;
+        return Objects.requireNonNull(zombies_map.get(x).peek(), "what? a null zombie?");
     }
 
 
@@ -98,14 +96,12 @@ public class Zombies {
 
         BigInteger key = direction == LEFT ? zombies_map.firstKey(): zombies_map.lastKey();
 
-        Zombie z = Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
-
-        return z;
+        return Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
     }
 
 
     private Zombie getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap){
-        Zombie z = subMap.firstEntry().getValue().peek();
+        Zombie z = Objects.requireNonNull(subMap.firstEntry().getValue().peek(), "first zombie should not be null");
 
         for (BigInteger key : subMap.keySet()) {
             assert z != null;
@@ -124,9 +120,7 @@ public class Zombies {
 
         if (subMap.isEmpty()) return null;
 
-        Zombie z = getMaxYInSubmap(subMap);
-
-        return z;
+        return getMaxYInSubmap(subMap);
     }
 
 
@@ -157,8 +151,8 @@ public class Zombies {
             return Zombies.this.getZombieInLine(zombieInLine,x);
         }
 
-        Zombie getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap){
-            return Zombies.this.getMaxYInSubmap(subMap);
+        void getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap){
+            Zombies.this.getMaxYInSubmap(subMap);
         }
 
         BigInteger checkInBound(BigInteger xp){

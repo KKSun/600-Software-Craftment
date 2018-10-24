@@ -43,6 +43,13 @@ public class ZombiesTest {
         zombies.clearAllZombies();
     }
 
+    @Test
+    public void testStatic() throws Exception {
+        assertTrue(testZombie.direction);
+        testZombie.map.clear();
+        assertEquals(0, testZombie.map.size());
+    }
+
     /**
      * Method: insert(Zombie z, BigInteger x, BigInteger y)
      * Bad Data: Zombie(1,1) already exist
@@ -377,9 +384,9 @@ public class ZombiesTest {
 
     /**
      * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
-     * Boundary: left and right out bound
+     * Bad Data: first zombie of a line is null
      */
-    @Test(expected = AssertionError.class)
+    @Test(expected = NullPointerException.class)
     public void testGetMaxYInSubmap_zNull() throws Exception {
         NavigableMap<BigInteger, PriorityQueue<Zombie>> map = new TreeMap<>();
         map.put(BigInteger.valueOf(5), new PriorityQueue<>(((o1, o2) -> o2.getY_position().compareTo(o1.getY_position()))));
