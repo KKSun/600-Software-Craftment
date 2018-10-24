@@ -7,7 +7,9 @@ import org.junit.After;
 import static org.junit.Assert.*;
 
 import java.math.BigInteger;
+import java.util.NavigableMap;
 import java.util.PriorityQueue;
+import java.util.TreeMap;
 
 /**
  * Zombies Tester.
@@ -125,8 +127,8 @@ public class ZombiesTest {
      */
     @Test
     public void testJavelin_min() throws Exception {
-        BigInteger[] loc = zombies.javelin(BigInteger.valueOf(-1));
-        assertEquals("[1,1]", "[" + loc[0] + "," + loc[1] + "]");
+        Zombie z = zombies.javelin(BigInteger.valueOf(-1));
+        assertEquals("[1,1]", z.toString());
     }
 
     /**
@@ -135,8 +137,8 @@ public class ZombiesTest {
      */
     @Test
     public void testJavelin_max() throws Exception {
-        BigInteger[] loc = zombies.javelin(BigInteger.valueOf(11));
-        assertEquals("[10,2]", "[" + loc[0] + "," + loc[1] + "]");
+        Zombie z = zombies.javelin(BigInteger.valueOf(11));
+        assertEquals("[10,2]", z.toString());
     }
 
     /**
@@ -146,8 +148,8 @@ public class ZombiesTest {
      */
     @Test
     public void testJavelin_normal() throws Exception {
-        BigInteger[] loc = zombies.javelin(BigInteger.valueOf(4));
-        assertEquals("[4,80]", "[" + loc[0] + "," + loc[1] + "]");
+        Zombie z = zombies.javelin(BigInteger.valueOf(4));
+        assertEquals("[4,80]", z.toString());
     }
 
     /**
@@ -178,8 +180,8 @@ public class ZombiesTest {
      */
     @Test
     public void testArrow_left() throws Exception {
-        BigInteger[] loc = zombies.arrow(true);
-        assertEquals("[1,1]", "[" + loc[0] + "," + loc[1] + "]");
+        Zombie z = zombies.arrow(true);
+        assertEquals("[1,1]", z.toString());
     }
 
     /**
@@ -189,8 +191,8 @@ public class ZombiesTest {
      */
     @Test
     public void testArrow_right() throws Exception {
-        BigInteger[] loc = zombies.arrow(false);
-        assertEquals("[10,2]", "[" + loc[0] + "," + loc[1] + "]");
+        Zombie z = zombies.arrow(false);
+        assertEquals("[10,2]", z.toString());
     }
 
     /**
@@ -206,11 +208,31 @@ public class ZombiesTest {
 
     /**
      * Method: bomb(BigInteger xp, BigInteger r)
+     * Data: zombies_map is empty
      */
     @Test
-    public void testBomb() throws Exception {
-        //todo
+    public void testBomb_empty() throws Exception {
+        zombies.clearAllZombies();
+        assertNull(zombies.bomb(BigInteger.valueOf(4), BigInteger.valueOf(5)));
     }
+
+    /**
+     * Method: bomb(BigInteger xp, BigInteger r)
+     */
+    @Test
+    public void testBomb_subMapEmpty() throws Exception {
+        assertNull(zombies.bomb(BigInteger.valueOf(20), BigInteger.valueOf(1)));
+    }
+
+    /**
+     * Method: bomb(BigInteger xp, BigInteger r)
+     */
+    @Test
+    public void testBomb_normal() throws Exception {
+        Zombie z = zombies.bomb(BigInteger.valueOf(4), BigInteger.valueOf(2));
+        assertEquals("[4,80]", z.toString());
+    }
+
 
     /**
      * Method: toString()
@@ -311,10 +333,57 @@ public class ZombiesTest {
 
     /**
      * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
+     * Boundary: left out bound, right in bound
      */
     @Test
-    public void testGetMaxYInSubmap() throws Exception {
-        //todo
+    public void testGetMaxYInSubmap_leftOutRightIn() throws Exception {
+        Zombie z1 = zombies.bomb(BigInteger.valueOf(-1), BigInteger.valueOf(5));
+        Zombie z2 = zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(80));
+        assertEquals(z1,z2);
+    }
+
+    /**
+     * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
+     * Boundary: left in bound, right out bound
+     */
+    @Test
+    public void testGetMaxYInSubmap_leftInRightOut() throws Exception {
+        Zombie z1 = zombies.bomb(BigInteger.valueOf(11), BigInteger.valueOf(8));
+        Zombie z2 = zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(80));
+        assertEquals(z1,z2);
+    }
+
+    /**
+     * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
+     * Boundary: left and right in bound
+     */
+    @Test
+    public void testGetMaxYInSubmap_leftRightIn() throws Exception {
+        Zombie z1 = zombies.bomb(BigInteger.valueOf(5), BigInteger.valueOf(2));
+        Zombie z2 = zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(80));
+        assertEquals(z1,z2);
+    }
+
+    /**
+     * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
+     * Boundary: left and right out bound
+     */
+    @Test
+    public void testGetMaxYInSubmap_leftRightOut() throws Exception {
+        Zombie z1 = zombies.bomb(BigInteger.valueOf(5), BigInteger.valueOf(8));
+        Zombie z2 = zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(80));
+        assertEquals(z1,z2);
+    }
+
+    /**
+     * Method: getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap)
+     * Boundary: left and right out bound
+     */
+    @Test(expected = AssertionError.class)
+    public void testGetMaxYInSubmap_zNull() throws Exception {
+        NavigableMap<BigInteger, PriorityQueue<Zombie>> map = new TreeMap<>();
+        map.put(BigInteger.valueOf(5), new PriorityQueue<>(((o1, o2) -> o2.getY_position().compareTo(o1.getY_position()))));
+        testZombie.getMaxYInSubmap(map);
     }
 
     /**
@@ -346,7 +415,7 @@ public class ZombiesTest {
 
     /**
      * Method: checkInBound(BigInteger xp)
-     * Boundary: xp in bound choose left near x
+     * Boundary: xp in bound: xp - floor(x) < ceiling(x) - xp
      */
     @Test
     public void testCheckInBound_leftInBound() throws Exception {
@@ -361,7 +430,7 @@ public class ZombiesTest {
 
     /**
      * Method: checkInBound(BigInteger xp)
-     * Boundary: xp in bound choose right near x
+     * Boundary: xp in bound: xp - floor(x) > ceiling(x) - xp
      */
     @Test
     public void testCheckInBound_rightinBound() throws Exception {

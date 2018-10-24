@@ -82,25 +82,25 @@ public class Zombies {
         return floorX.subtract(xp).abs().compareTo(ceilingX.subtract(xp).abs()) > 0 ? ceilingX : floorX;
     }
 
-    public BigInteger[] javelin(BigInteger xp) {
+    public Zombie javelin(BigInteger xp) {
         if (zombies_map.isEmpty()) return null;
 
         BigInteger x = checkInBound(xp);
 
         Zombie z = Objects.requireNonNull(zombies_map.get(x).peek(), "what? a null zombie?");
 
-        return z.getLocation();
+        return z;
     }
 
 
-    public BigInteger[] arrow(boolean direction) {
+    public Zombie arrow(boolean direction) {
         if (zombies_map.isEmpty()) return null;
 
         BigInteger key = direction == LEFT ? zombies_map.firstKey(): zombies_map.lastKey();
 
         Zombie z = Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
 
-        return z.getLocation();
+        return z;
     }
 
 
@@ -117,7 +117,7 @@ public class Zombies {
         return z;
     }
     
-    public BigInteger[] bomb(BigInteger xp, BigInteger r) {
+    public Zombie bomb(BigInteger xp, BigInteger r) {
         if (zombies_map.isEmpty()) return null;
 
         NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap = zombies_map.subMap(xp.subtract(r),true, xp.add(r), true);
@@ -126,7 +126,7 @@ public class Zombies {
 
         Zombie z = getMaxYInSubmap(subMap);
 
-        return z.getLocation();
+        return z;
     }
 
 

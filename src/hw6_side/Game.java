@@ -2,9 +2,7 @@ package hw6_side;
 
 import HW6.Zombie;
 import HW6.Zombies;
-
 import java.math.BigInteger;
-import java.util.Arrays;
 
 public class Game {
     public static void main(String[] args){
@@ -50,9 +48,9 @@ public class Game {
 
         System.out.println(zombies);
 
-        System.out.println(Arrays.toString(zombies.arrow(true)));
-        System.out.println(Arrays.toString(zombies.arrow(false)));
-        System.out.println(Arrays.toString(zombies.javelin(BigInteger.valueOf(4))));
-        System.out.println(Arrays.toString(zombies.bomb(BigInteger.valueOf(5),BigInteger.valueOf(5))));
+        System.out.println(zombies.arrow(true));
+        System.out.println(zombies.arrow(false));
+        System.out.println(zombies.javelin(BigInteger.valueOf(4)));
+        System.out.println(zombies.bomb(BigInteger.valueOf(5),BigInteger.valueOf(5)));
     }
 }
