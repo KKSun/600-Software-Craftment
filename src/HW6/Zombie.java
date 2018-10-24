@@ -41,4 +41,8 @@ public class Zombie {
     public String toString() {
         return "[" + getX_position() + "," + getY_position() + "]";
     }
+
+    public BigInteger[] getLocation(){
+        return new BigInteger[]{this.getX_position(), this.getY_position()};
+    }
 }

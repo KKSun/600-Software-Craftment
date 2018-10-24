@@ -9,9 +9,6 @@ public class Zombies {
 
     private static NavigableMap<BigInteger, PriorityQueue<Zombie>> zombies_map = new TreeMap<>();
 
-    private Comparator<Zombie> largerYFirst = (o1, o2) -> o2.getY_position().compareTo(o1.getY_position());
-
-
     private void checkInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
         for (Zombie z : zombieInLine) {
             if(z.getY_position().equals(x)) throw new IllegalArgumentException("zombie already there");
@@ -23,7 +20,7 @@ public class Zombies {
         z.setY_position(y);
 
         if (!zombies_map.containsKey(z.getX_position())) {
-            zombies_map.put(z.getX_position(), new PriorityQueue<>(largerYFirst));
+            zombies_map.put(z.getX_position(), new PriorityQueue<>((o1, o2) -> o2.getY_position().compareTo(o1.getY_position())));
         }
 
         checkInLine(zombies_map.get(x), z.getY_position());
@@ -42,7 +39,7 @@ public class Zombies {
     }
 
     public Zombie zombie(BigInteger x, BigInteger y) {
-        PriorityQueue<Zombie> zombiesInLine = zombies_map.getOrDefault(x, null);
+        PriorityQueue<Zombie> zombiesInLine = zombies_map.get(x);
 
         assert !zombiesInLine.isEmpty():"no zombie in this line";
 
@@ -57,7 +54,7 @@ public class Zombies {
     public Zombie delete(BigInteger x, BigInteger y) {
         Zombie tempZ = Objects.requireNonNull(zombie(x, y), "No zombie there.");
 
-        PriorityQueue<Zombie> zombiesInLine = zombies_map.getOrDefault(x, null);
+        PriorityQueue<Zombie> zombiesInLine = zombies_map.get(x);
 
         zombiesInLine.remove(tempZ);
 
@@ -78,30 +75,29 @@ public class Zombies {
 
         Zombie z = Objects.requireNonNull(zombies_map.get(x).peek(), "what? a null zombie?");
 
-        return new BigInteger[]{z.getX_position(), z.getY_position()};
+        return z.getLocation();
     }
+
 
     public BigInteger[] arrow(boolean direction) {
         if (zombies_map.isEmpty()) return null;
 
         Zombie z;
+        BigInteger key;
 
-        if (direction == LEFT) {
-            z = Objects.requireNonNull(zombies_map.get(zombies_map.firstKey()).peek(), "what? a null zombie?");
-        } else {
-            z = Objects.requireNonNull(zombies_map.get(zombies_map.lastKey()).peek(), "what? a null zombie?");
+        if(direction == LEFT){
+            key = zombies_map.firstKey();
+        }else{
+            key = zombies_map.lastKey();
         }
 
-        return new BigInteger[]{z.getX_position(), z.getY_position()};
+        z = Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
+
+        return z.getLocation();
     }
 
-    public BigInteger[] bomb(BigInteger xp, BigInteger r) {
-        if (zombies_map.isEmpty()) return null;
 
-        NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap = zombies_map.subMap(xp.subtract(r),true, xp.add(r), true);
-
-        if (subMap.isEmpty()) return null;
-
+    private Zombie getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap){
         Zombie z = subMap.firstEntry().getValue().peek();
 
         for (BigInteger key : subMap.keySet()) {
@@ -111,8 +107,20 @@ public class Zombies {
             }
         }
 
-        assert z != null;
-        return new BigInteger[]{z.getX_position(), z.getY_position()};
+        return z;
+    }
+
+
+    public BigInteger[] bomb(BigInteger xp, BigInteger r) {
+        if (zombies_map.isEmpty()) return null;
+
+        NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap = zombies_map.subMap(xp.subtract(r),true, xp.add(r), true);
+
+        if (subMap.isEmpty()) return null;
+
+        Zombie z = getMaxYInSubmap(subMap);
+
+        return z.getLocation();
     }
 
 
@@ -126,7 +134,7 @@ public class Zombies {
         return sb.toString();
     }
 
-    public void clearAll() {
+    public void clearAllZombies() {
         zombies_map.clear();
     }
 }

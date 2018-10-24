@@ -1,7 +1,5 @@
 package HW6;
 
-import HW6.Zombie;
-import HW6.Zombies;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -20,7 +18,7 @@ import java.util.Arrays;
  */
 public class ZombiesTest {
 
-    Zombies zombies = new Zombies();
+    private Zombies zombies = new Zombies();
 
     @Before
     public void before() throws Exception {
@@ -40,35 +38,42 @@ public class ZombiesTest {
 
     @After
     public void after() throws Exception {
-        zombies.clearAll();
+        zombies.clearAllZombies();
     }
 
     /**
      * Method: insert(Zombie z, int x, int y)
      */
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testInsert() throws Exception {
         int temp = zombies.zombie(BigInteger.valueOf(6), BigInteger.valueOf(12)).hashCode();
         zombies.insert(zombies.delete(BigInteger.valueOf(6), BigInteger.valueOf(12)), BigInteger.valueOf(6), BigInteger.valueOf(4));
         assertEquals(temp, zombies.zombie(BigInteger.valueOf(6), BigInteger.valueOf(4)).hashCode());
+        zombies.insert(Zombie.build(), BigInteger.valueOf(1), BigInteger.valueOf(1));
     }
 
     /**
      * Method: zombie(int x, int y)
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testZombie() throws Exception {
         assertEquals(zombies.zombie(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode(), zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode());
+        assertNull(zombies.zombie(BigInteger.valueOf(120), BigInteger.valueOf(22)));
     }
 
     /**
      * Method: delete(int x, int y)
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testDelete() throws Exception {
+        zombies.delete(BigInteger.valueOf(1), BigInteger.valueOf(1));
+        assertNull(zombies.zombie(BigInteger.valueOf(1), BigInteger.valueOf(1)));
+        assertNull(zombies.delete(BigInteger.valueOf(1), BigInteger.valueOf(1)));
         Zombie zz1 = zombies.zombie(BigInteger.valueOf(5), BigInteger.valueOf(6));
         Zombie zz2 = zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(6));
         assertEquals(zz1, zz2);
+        zombies.clearAllZombies();
+        zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(6));
     }
 
     /**
@@ -89,6 +94,8 @@ public class ZombiesTest {
     public void testArrow() throws Exception {
         assertEquals("[1, 1]", Arrays.toString(zombies.arrow(true)));
         assertEquals("[10, 2]", Arrays.toString(zombies.arrow(false)));
+        zombies.clearAllZombies();
+        assertNull(zombies.arrow(true));
     }
 
     /**
@@ -101,21 +108,12 @@ public class ZombiesTest {
         assertEquals("[7, 28]", Arrays.toString(zombies.bomb(BigInteger.valueOf(4), BigInteger.valueOf(3))));
     }
 
-
-    /**
-     * Method: checkInLine(PriorityQueue<Zombie> zombieInLine, int y)
-     */
-    @Test(expected = IllegalArgumentException.class)
-    public void testCheckInLine() throws Exception {
-        zombies.insert(Zombie.build(), BigInteger.valueOf(1), BigInteger.valueOf(1));
-    }
-
     /**
      * Method: toString()
      */
     @Test
     public void testToString() throws Exception {
-        zombies.clearAll();
+        zombies.clearAllZombies();
         zombies.insert(Zombie.build(), BigInteger.valueOf(1),BigInteger.valueOf(8));
         zombies.insert(Zombie.build(),BigInteger.valueOf(5),BigInteger.valueOf(3));
         assertEquals("Key: 1  \tValue: [[1,8]]\n" +
