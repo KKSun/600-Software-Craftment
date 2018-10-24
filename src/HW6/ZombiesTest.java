@@ -3,7 +3,6 @@ package HW6;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import sun.jvm.hotspot.utilities.AssertionFailure;
 
 import static org.junit.Assert.*;
 
@@ -76,17 +75,6 @@ public class ZombiesTest {
     @Test
     public void testZombie_null() throws Exception {
         assertNull(zombies.zombie(BigInteger.valueOf(20), BigInteger.valueOf(20)));
-    }
-
-    /**
-     * Method: zombie(BigInteger x, BigInteger y)
-     * Bad data: zombie in line is empty
-     */
-    @Test(expected = AssertionError.class)
-    public void testZombie_empty() throws Exception {
-        PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(10));
-        q.clear();
-        zombies.zombie(BigInteger.valueOf(10), BigInteger.valueOf(2));
     }
 
     /**
