@@ -42,7 +42,7 @@ public class Game {
 
         System.out.println(zombies);
 
-        zombies.delete(BigInteger.valueOf(5),BigInteger.valueOf(6));
+        zombies.delete(BigInteger.valueOf(1),BigInteger.valueOf(1));
 
         System.out.println(zombies);
 
