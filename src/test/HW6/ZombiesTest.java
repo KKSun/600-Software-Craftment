@@ -1,5 +1,7 @@
-package HW6;
+package test.HW6;
 
+import HW6.Zombie;
+import HW6.Zombies;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -55,10 +57,9 @@ public class ZombiesTest {
     /**
      * Method: zombie(int x, int y)
      */
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testZombie() throws Exception {
         assertEquals(zombies.zombie(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode(), zombies.delete(BigInteger.valueOf(5), BigInteger.valueOf(22)).hashCode());
-        assertNull(zombies.zombie(BigInteger.valueOf(120), BigInteger.valueOf(22)));
     }
 
     /**

@@ -10,28 +10,28 @@ public class Zombies {
     private static NavigableMap<BigInteger, PriorityQueue<Zombie>> zombies_map = new TreeMap<>();
 
     private void checkInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
+        if(zombieInLine == null) return;
+
         for (Zombie z : zombieInLine) {
             if(z.getY_position().equals(x)) throw new IllegalArgumentException("zombie already there");
         }
     }
 
     public void insert(Zombie z, BigInteger x, BigInteger y) {
+        checkInLine(zombies_map.get(x), y);
+
         z.setX_position(x);
         z.setY_position(y);
 
-        if (!zombies_map.containsKey(z.getX_position())) {
-            zombies_map.put(z.getX_position(), new PriorityQueue<>((o1, o2) -> o2.getY_position().compareTo(o1.getY_position())));
-        }
-
-        checkInLine(zombies_map.get(x), z.getY_position());
+        zombies_map.getOrDefault(x, zombies_map.put(x, new PriorityQueue<>((o1, o2) -> o2.getY_position().compareTo(o1.getY_position()))));
 
         zombies_map.get(z.getX_position()).add(z);
     }
 
 
-    private Zombie getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
+    private Zombie getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger y) {
         for (Zombie z : zombieInLine) {
-            if (z.getY_position().equals(x)) {
+            if (z.getY_position().equals(y)) {
                 return z;
             }
         }
@@ -41,11 +41,11 @@ public class Zombies {
     public Zombie zombie(BigInteger x, BigInteger y) {
         PriorityQueue<Zombie> zombiesInLine = zombies_map.get(x);
 
-        assert !zombiesInLine.isEmpty():"no zombie in this line";
-
         if (zombiesInLine == null) {
             return null;
         }
+
+        assert !zombiesInLine.isEmpty():"no zombie in this line";
 
         return getZombieInLine(zombiesInLine, y);
     }
@@ -82,16 +82,9 @@ public class Zombies {
     public BigInteger[] arrow(boolean direction) {
         if (zombies_map.isEmpty()) return null;
 
-        Zombie z;
-        BigInteger key;
+        BigInteger key = direction == LEFT ? zombies_map.firstKey(): zombies_map.lastKey();
 
-        if(direction == LEFT){
-            key = zombies_map.firstKey();
-        }else{
-            key = zombies_map.lastKey();
-        }
-
-        z = Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
+        Zombie z = Objects.requireNonNull(zombies_map.get(key).peek(), "what? a null zombie?");
 
         return z.getLocation();
     }
@@ -109,7 +102,6 @@ public class Zombies {
 
         return z;
     }
-
 
     public BigInteger[] bomb(BigInteger xp, BigInteger r) {
         if (zombies_map.isEmpty()) return null;
