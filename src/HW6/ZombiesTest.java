@@ -3,6 +3,8 @@ package HW6;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+import sun.jvm.hotspot.utilities.AssertionFailure;
+
 import static org.junit.Assert.*;
 
 import java.math.BigInteger;
@@ -35,14 +37,6 @@ public class ZombiesTest {
         zombies.insert(Zombie.build(), BigInteger.valueOf(10), BigInteger.valueOf(2));
     }
 
-    /**
-     *  static boolean LEFT
-     */
-    @Test
-    public void testStatic() throws Exception{
-        assertTrue(testZombie.direction);
-    }
-
     @After
     public void after() throws Exception {
         zombies.clearAllZombies();
@@ -51,7 +45,6 @@ public class ZombiesTest {
     /**
      * Method: insert(Zombie z, BigInteger x, BigInteger y)
      * Bad Data: Zombie(1,1) already exist
-     * Compound
      */
     @Test(expected = IllegalArgumentException.class)
     public void testInsert_alreadyExist() throws Exception {
@@ -60,8 +53,7 @@ public class ZombiesTest {
 
     /**
      * Method: insert(Zombie z, BigInteger x, BigInteger y)
-     * Structure
-     * Data Flow
+     * insert without existing x
      */
     @Test
     public void testInsert_noX() throws Exception {
@@ -70,8 +62,7 @@ public class ZombiesTest {
 
     /**
      * Method: insert(Zombie z, BigInteger x, BigInteger y)
-     * Structure
-     * Data Flow
+     * insert with existing x
      */
     @Test
     public void testInsert_normal() throws Exception {
@@ -80,8 +71,7 @@ public class ZombiesTest {
 
     /**
      * Method: zombie(BigInteger x, BigInteger y)
-     * Structure
-     * Data Flow
+     * no certain zombie in zombies
      */
     @Test
     public void testZombie_null() throws Exception {
@@ -90,20 +80,18 @@ public class ZombiesTest {
 
     /**
      * Method: zombie(BigInteger x, BigInteger y)
-     * Structure
-     * Bad Data
+     * Bad data: zombie in line is empty
      */
     @Test(expected = AssertionError.class)
     public void testZombie_empty() throws Exception {
-        PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(4));
+        PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(10));
         q.clear();
-        zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(4));
+        zombies.zombie(BigInteger.valueOf(10), BigInteger.valueOf(2));
     }
 
     /**
      * Method: zombie(BigInteger x, BigInteger y)
-     * Structure
-     * Data Flow
+     * Good Data: locate zombie exist in (4,3)
      */
     @Test
     public void testZombie_normal() throws Exception {
@@ -114,8 +102,7 @@ public class ZombiesTest {
 
     /**
      * Method: delete(BigInteger x, BigInteger y)
-     * Data Flow
-     * Bad Data
+     * Bad Data: no zombie to be deleted
      */
     @Test(expected = NullPointerException.class)
     public void testDelete_null() throws Exception {
@@ -125,8 +112,7 @@ public class ZombiesTest {
 
     /**
      * Method: delete(BigInteger x, BigInteger y)
-     * Data Flow
-     * Structure
+     * Structure, Data Flow: zombie in line is empty
      */
     @Test
     public void testDelete_lineEmpty() throws Exception {
@@ -136,7 +122,7 @@ public class ZombiesTest {
 
     /**
      * Method: delete(BigInteger x, BigInteger y)
-     * Structure
+     * Good Data: delete zombie in (5,6)
      */
     @Test
     public void testDelete_normal_lineNotEmpty() throws Exception {
@@ -260,7 +246,13 @@ public class ZombiesTest {
     }
 
     /*
+     *
+     *
+     *
      * tests of private methods below
+     *
+     *
+     *
      */
 
     /**
@@ -271,35 +263,32 @@ public class ZombiesTest {
     public void testCheckInLine_null() throws Exception {
         PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(4));
         q.clear();
-        testZombie.getZombieInLine(q,BigInteger.valueOf(3));
+        testZombie.checkInLine(q,BigInteger.valueOf(3));
     }
 
     /**
      * Method: checkInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x)
-     * Bad Data
+     * Bad Data: (6,8) already have a zombie
      */
     @Test(expected = IllegalArgumentException.class)
-    public void testCheckInLine_YNotExist() throws Exception {
+    public void testCheckInLine_YExist() throws Exception {
         PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(6));
         testZombie.checkInLine(q,BigInteger.valueOf(8));
     }
 
     /**
      * Method: checkInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x)
-     * Data Flow
+     * Good Data: (4,4) don't have a zombie
      */
     @Test
-    public void testCheckInLine_YExist() throws Exception {
+    public void testCheckInLine_YNotExist() throws Exception {
         PriorityQueue<Zombie> q = testZombie.map.get(BigInteger.valueOf(4));
-        testZombie.checkInLine(q,BigInteger.valueOf(3));
-        Zombie z1 = testZombie.getZombieInLine(q,BigInteger.valueOf(3));
-        Zombie z2 = zombies.zombie(BigInteger.valueOf(4), BigInteger.valueOf(3));
-        assertEquals(z1,z2);
+        testZombie.checkInLine(q,BigInteger.valueOf(4));
     }
 
     /**
      * Method: getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x)
-     * Data Flow
+     * Good Data: zombie in line is null
      */
     @Test
     public void testGetZombieInLine_null() throws Exception {
@@ -311,7 +300,7 @@ public class ZombiesTest {
 
     /**
      * Method: getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x)
-     * Data Flow
+     * Good Data: zombie doesn't exist
      */
     @Test
     public void testGetZombieInLine_notExist() throws Exception {
@@ -322,7 +311,7 @@ public class ZombiesTest {
 
     /**
      * Method: getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x)
-     * Data Flow
+     * Good Data: return zombie exist
      */
     @Test
     public void testGetZombieInLine_normal() throws Exception {

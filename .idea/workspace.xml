@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b99bb453-4c17-4ce4-9cb4-6b780866df62" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/HW6/ZombieTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/HW6/Zombies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/HW6/Zombies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/test/HW6/ZombiesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HW6/ZombieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HW6/ZombieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HW6/Zombies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW6/Zombies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/HW6/ZombiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/600_software_craftment/HW6/ZombiesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/600_software_craftment/HW6/ZombiesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HW6/ZombiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW6/ZombiesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,25 +40,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="50" />
+          <entry key="java" value="52" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="50" />
           <entry key="Scratch" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3946" />
+          <entry key="java" value="4642" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3929" />
+          <entry key="JAVA" value="4625" />
           <entry key="Scratch" value="17" />
         </counts>
       </usages-collector>
@@ -72,96 +68,34 @@
     <favorites_list name="600_software_craftment" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5296736">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#3719#3720#0" expanded="true" />
-                    <element signature="e#3754#3755#0" expanded="true" />
-                    <element signature="e#4090#4091#0" expanded="true" />
-                    <element signature="e#4140#4141#0" expanded="true" />
-                    <element signature="e#4817#4818#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/HW6/ZombiesTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="374" column="65" lean-forward="true" selection-start-line="374" selection-start-column="65" selection-end-line="374" selection-end-column="65" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/HW6/Zombie.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#455#456#0" expanded="true" />
-                    <element signature="e#494#495#0" expanded="true" />
-                    <element signature="e#535#536#0" expanded="true" />
-                    <element signature="e#568#569#0" expanded="true" />
-                    <element signature="e#624#625#0" expanded="true" />
-                    <element signature="e#668#669#0" expanded="true" />
-                    <element signature="e#709#710#0" expanded="true" />
-                    <element signature="e#742#743#0" expanded="true" />
-                    <element signature="e#798#799#0" expanded="true" />
-                    <element signature="e#842#843#0" expanded="true" />
-                    <element signature="e#874#875#0" expanded="true" />
-                    <element signature="e#948#949#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/HW6/ZombieTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="470">
-                  <caret line="164" column="19" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4090#4091#0" expanded="true" />
-                    <element signature="e#4140#4141#0" expanded="true" />
-                    <element signature="e#4811#4812#0" expanded="true" />
-                    <element signature="e#4864#4865#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HW6/ZombiesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2278">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4817#4818#0" expanded="true" />
+                <element signature="e#4877#4878#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -195,9 +129,9 @@
       <find>map</find>
       <find>new BigInteger[]{z.getX_position(), z.getY_position()}</find>
       <find>getordefault</find>
-      <find>static</find>
       <find>TRUE</find>
       <find>private</find>
+      <find>static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -356,7 +290,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="401" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540392612980" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540394918028" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -408,14 +342,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ZombiesTest.testCheckInBound_rightinBound">
+  <component name="RunManager" selected="JUnit.ZombiesTest.testZombie_empty">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZombiesTest.testCheckInBound_leftInBound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZombiesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -425,14 +359,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="HW6" />
       <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
-      <option name="METHOD_NAME" value="testCheckInBound_leftInBound" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZombiesTest.testCheckInLine_YExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="600_software_craftment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HW6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HW6" />
+      <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
+      <option name="METHOD_NAME" value="testCheckInLine_YExist" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZombiesTest.testCheckInBound_max" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZombiesTest.testCheckInLine_YNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -442,14 +391,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="HW6" />
       <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
-      <option name="METHOD_NAME" value="testCheckInBound_max" />
+      <option name="METHOD_NAME" value="testCheckInLine_YNotExist" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZombiesTest.testCheckInBound_min" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZombiesTest.testZombie_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -459,14 +408,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="HW6" />
       <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
-      <option name="METHOD_NAME" value="testCheckInBound_min" />
+      <option name="METHOD_NAME" value="testZombie_empty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZombiesTest.testCheckInBound_normal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZombiesTest.testZombie_lineNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="600_software_craftment" />
       <extension name="coverage">
         <pattern>
@@ -476,24 +425,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="HW6" />
       <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
-      <option name="METHOD_NAME" value="testCheckInBound_normal" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZombiesTest.testCheckInBound_rightinBound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="600_software_craftment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="HW6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="HW6" />
-      <option name="MAIN_CLASS_NAME" value="HW6.ZombiesTest" />
-      <option name="METHOD_NAME" value="testCheckInBound_rightinBound" />
+      <option name="METHOD_NAME" value="testZombie_lineNull" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -515,19 +447,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ZombiesTest.testCheckInBound_min" />
-      <item itemvalue="JUnit.ZombiesTest.testCheckInBound_max" />
-      <item itemvalue="JUnit.ZombiesTest.testCheckInBound_normal" />
-      <item itemvalue="JUnit.ZombiesTest.testCheckInBound_leftInBound" />
-      <item itemvalue="JUnit.ZombiesTest.testCheckInBound_rightinBound" />
+      <item itemvalue="JUnit.ZombiesTest" />
+      <item itemvalue="JUnit.ZombiesTest.testCheckInLine_YExist" />
+      <item itemvalue="JUnit.ZombiesTest.testZombie_lineNull" />
+      <item itemvalue="JUnit.ZombiesTest.testCheckInLine_YNotExist" />
+      <item itemvalue="JUnit.ZombiesTest.testZombie_empty" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ZombiesTest.testCheckInBound_rightinBound" />
-        <item itemvalue="JUnit.ZombiesTest.testCheckInBound_leftInBound" />
-        <item itemvalue="JUnit.ZombiesTest.testCheckInBound_normal" />
-        <item itemvalue="JUnit.ZombiesTest.testCheckInBound_max" />
-        <item itemvalue="JUnit.ZombiesTest.testCheckInBound_min" />
+        <item itemvalue="JUnit.ZombiesTest.testZombie_empty" />
+        <item itemvalue="JUnit.ZombiesTest" />
+        <item itemvalue="JUnit.ZombiesTest.testCheckInLine_YNotExist" />
+        <item itemvalue="JUnit.ZombiesTest.testCheckInLine_YExist" />
+        <item itemvalue="JUnit.ZombiesTest.testZombie_lineNull" />
       </list>
     </recent_temporary>
   </component>
@@ -577,39 +509,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ZombiesTest_testJavelin_normal - 2018.10.24 at 10h 19m 28s.xml">
-      <configuration name="ZombiesTest.testJavelin_normal" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testCheckInLine_YExist - 2018.10.24 at 11h 16m 31s.xml">
+      <configuration name="ZombiesTest.testCheckInLine_YExist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_normal - 2018.10.24 at 10h 19m 39s.xml">
-      <configuration name="ZombiesTest.testJavelin_normal" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testCheckInLine_YExist - 2018.10.24 at 11h 16m 52s.xml">
+      <configuration name="ZombiesTest.testCheckInLine_YExist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_empty - 2018.10.24 at 10h 20m 30s.xml">
-      <configuration name="ZombiesTest.testJavelin_empty" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testCheckInLine_YNotExist - 2018.10.24 at 11h 16m 55s.xml">
+      <configuration name="ZombiesTest.testCheckInLine_YNotExist" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_max - 2018.10.24 at 10h 38m 19s.xml">
-      <configuration name="ZombiesTest.testJavelin_max" configurationId="JUnit" />
+    <history-entry file="ZombiesTest - 2018.10.24 at 11h 20m 36s.xml">
+      <configuration name="ZombiesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_min - 2018.10.24 at 10h 38m 29s.xml">
-      <configuration name="ZombiesTest.testJavelin_min" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 22m 02s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_normal - 2018.10.24 at 10h 38m 32s.xml">
-      <configuration name="ZombiesTest.testJavelin_normal" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 23m 09s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testJavelin_empty - 2018.10.24 at 10h 38m 37s.xml">
-      <configuration name="ZombiesTest.testJavelin_empty" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 23m 36s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testCheckInBound_min - 2018.10.24 at 10h 43m 14s.xml">
-      <configuration name="ZombiesTest.testCheckInBound_min" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 25m 24s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testCheckInBound_max - 2018.10.24 at 10h 44m 15s.xml">
-      <configuration name="ZombiesTest.testCheckInBound_max" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 27m 10s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ZombiesTest_testCheckInBound_normal - 2018.10.24 at 10h 44m 46s.xml">
-      <configuration name="ZombiesTest.testCheckInBound_normal" configurationId="JUnit" />
+    <history-entry file="ZombiesTest_testZombie_empty - 2018.10.24 at 11h 27m 22s.xml">
+      <configuration name="ZombiesTest.testZombie_empty" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258080000" />
+    <option name="totallyTimeSpent" value="260528000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1107,23 +1039,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HW6/Zombies.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        <state relative-caret-position="2278">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3719#3720#0" expanded="true" />
-            <element signature="e#3754#3755#0" expanded="true" />
-            <element signature="e#4090#4091#0" expanded="true" />
-            <element signature="e#4140#4141#0" expanded="true" />
             <element signature="e#4817#4818#0" expanded="true" />
+            <element signature="e#4877#4878#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HW6/ZombiesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="374" column="65" lean-forward="true" selection-start-line="374" selection-start-column="65" selection-end-line="374" selection-end-column="65" />
+        <state relative-caret-position="308">
+          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
