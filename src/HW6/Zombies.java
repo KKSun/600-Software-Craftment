@@ -23,15 +23,17 @@ public class Zombies {
         z.setX_position(x);
         z.setY_position(y);
 
-        zombies_map.getOrDefault(x, zombies_map.put(x, new PriorityQueue<>((o1, o2) -> o2.getY_position().compareTo(o1.getY_position()))));
+        if (!zombies_map.containsKey(x)) {
+            zombies_map.put(x, new PriorityQueue<>((o1, o2) -> o2.getY_position().compareTo(o1.getY_position())));
+        }
 
         zombies_map.get(z.getX_position()).add(z);
     }
 
 
-    private Zombie getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger y) {
+    private Zombie getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
         for (Zombie z : zombieInLine) {
-            if (z.getY_position().equals(y)) {
+            if (z.getY_position().equals(x)) {
                 return z;
             }
         }
@@ -66,12 +68,24 @@ public class Zombies {
     }
 
 
-    public BigInteger[] javelin(BigInteger xp) {
-        if (zombies_map.isEmpty()) return null;
+    private BigInteger checkInBound(BigInteger xp){
+        if(xp.compareTo(zombies_map.firstKey()) < 0){
+            return zombies_map.firstKey();
+        }
+
+        if(xp.compareTo(zombies_map.lastKey()) > 0){
+            return zombies_map.lastKey();
+        }
 
         BigInteger floorX = zombies_map.floorKey(xp);
         BigInteger ceilingX = zombies_map.ceilingKey(xp);
-        BigInteger x = floorX.subtract(xp).abs().compareTo(ceilingX.subtract(xp).abs()) > 0 ? ceilingX : floorX;
+        return floorX.subtract(xp).abs().compareTo(ceilingX.subtract(xp).abs()) > 0 ? ceilingX : floorX;
+    }
+
+    public BigInteger[] javelin(BigInteger xp) {
+        if (zombies_map.isEmpty()) return null;
+
+        BigInteger x = checkInBound(xp);
 
         Zombie z = Objects.requireNonNull(zombies_map.get(x).peek(), "what? a null zombie?");
 
@@ -102,7 +116,7 @@ public class Zombies {
 
         return z;
     }
-
+    
     public BigInteger[] bomb(BigInteger xp, BigInteger r) {
         if (zombies_map.isEmpty()) return null;
 
@@ -128,5 +142,27 @@ public class Zombies {
 
     public void clearAllZombies() {
         zombies_map.clear();
+    }
+
+    class TestHook{
+        boolean direction = LEFT;
+
+        NavigableMap <BigInteger, PriorityQueue<Zombie>> map = zombies_map;
+
+        void checkInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
+            Zombies.this.checkInLine(zombieInLine,x);
+        }
+
+        Zombie getZombieInLine(PriorityQueue<Zombie> zombieInLine, BigInteger x) {
+            return Zombies.this.getZombieInLine(zombieInLine,x);
+        }
+
+        Zombie getMaxYInSubmap(NavigableMap<BigInteger, PriorityQueue<Zombie>> subMap){
+            return Zombies.this.getMaxYInSubmap(subMap);
+        }
+
+        BigInteger checkInBound(BigInteger xp){
+            return Zombies.this.checkInBound(xp);
+        }
     }
 }

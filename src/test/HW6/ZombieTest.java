@@ -1,5 +1,6 @@
-package HW6;
+package test.HW6;
 
+import HW6.Zombie;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
